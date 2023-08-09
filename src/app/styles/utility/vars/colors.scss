@@ -1,0 +1,82 @@
+
+/* BASE */
+
+$base:        hsla(0deg, 0%, 20%, 1);
+$system:      hsla(0deg, 0%, 86%, 1);
+$background:  hsla(0deg, 0%, 100%, 1);
+$secondary:   hsla(240deg, 40%, 98%, 1);
+$surface:     hsla(0deg, 0%, 100%, 1);
+$brand:       hsla(240deg, 90%, 65%, 1);
+$critical:    hsla(0deg, 80%, 65%, 1);
+$blue:        hsla(222deg, 89%, 89%, 1);
+$purple:      hsla(266deg, 86%, 66%, 1);
+$orange:      hsla(9deg, 77%, 67%, 1);
+$yellow:      hsla(40deg, 100%, 67%, 1);
+$green:       hsla(112deg, 42%, 64%, 1);
+
+/* TEXT */
+
+$textBase:                 $base;
+$textSecondary:            #{hsla-new($base, (l: lightness($base) + 30))};
+$textSecondaryHover:       #{hsla-new($base, (l: lightness($base) + 10))};
+$textSurface:              $surface;
+$textBrand:                $brand;
+$textBrandHover:           #{hsla-new($brand, (l: lightness($brand) - 10))};
+$textCritical:             $critical;
+
+/* BACKGROUND */
+
+$backgroundBase:                $background;
+$backgroundSecondaryBase:       $base;
+$backgroundSurface:             $surface;
+$backgroundSurfaceAlfa:         #{hsla-new($surface, (a: 0.2))};
+$backgroundSecondary:           $secondary;
+$backgroundBrand:               $brand;
+$backgroundSystem:              $system;
+$backgroundTeacher:             $blue;
+$backgroundProduct1:            $brand;
+$backgroundProduct2:            $purple;
+$backgroundProduct3:            $orange;
+$backgroundProduct4:            $yellow;
+$backgroundProduct5:            $green;
+
+/* BORDER */
+
+$borderBase:                    $system;
+$borderBaseHover:               #{hsla-new($system, (l: lightness($system) - 20))};
+$borderSecondary:               hsla-new($system, (l: lightness($system) + 9));
+$borderSecondaryHover:          #{hsla-new($system, (l: lightness($system) - 11))};
+$borderPrimary:                 $brand;
+$borderPrimaryHover:            #{hsla-new($brand, (l: lightness($brand) - 10))};
+$borderCritical:                $critical;
+$borderCriticalHover:           #{hsla-new($critical, (l: lightness($critical) - 10))};
+
+/* INTERACTIVE */
+
+$controlSurfaceBackground:                    $system;
+$controlBrandBackground:                      $brand;
+$controlBrandBackgroundHover:                 #{hsla-new($brand, (l: lightness($brand) - 10))};
+$controlSecondaryBackground:                  $secondary;
+$controlSecondaryBackgroundHover:             #{hsla-new($secondary, (l: lightness($secondary) - 5))};
+$controlOutlineSecondaryBorder:               #{hsla-new($secondary, (l: lightness($secondary) - 5))};
+$controlOutlineSecondaryBorderHover:          #{hsla-new($secondary, (l: lightness($secondary) - 10))};
+$controlOutlineBrandBorder:                   $brand;
+$controlOutlineBrandBorderHover:              #{hsla-new($brand, (l: lightness($brand) + 15))};
+$controlOutlineBrandText:                     $brand;
+$controlOutlineBrandTextHover:                #{hsla-new($brand, (l: lightness($brand) + 15))};
+$controlSurfaceText:                          $surface;
+$controlBrandText:                            $brand;
+$controlBrandTextHover:                       #{hsla-new($brand, (l: lightness($brand) - 10))};
+$controlBaseText:                             $base;
+$controlBaseTextHover:                        #{hsla-new($brand, (l: lightness($brand) - 10))};
+$controlSecondaryBrandText:                   $surface;
+$controlSecondaryBrandHover:                  #{hsla-new($surface, (a: alpha($surface) - 0.5))};
+
+/* SHADOW */
+$shadowBase:                          0 toRem(3) toRem(15) rgba(52, 52, 52, 0.07);
+$shadowSecondary:                     0 toRem(3) toRem(15) rgba(52, 52, 52, 0.3);
+
+
+/* GRADIENT */
+
+$gradientWhite: linear-gradient(360deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);

@@ -1,0 +1,13 @@
+$mainFontFamily: 'Gilgory';
+$secondaryFontFamily: 'Montserrat';
+$icon: 'icon', sans-serif;
+
+$tags: (
+    h1: (toRem(22), toRem(30), toRem(40), (toRem(24), toRem(38), toRem(46))),
+    h2: (toRem(20), toRem(28), toRem(32), (toRem(23), toRem(32), toRem(40))),
+    h3: (toRem(16), toRem(20), toRem(20), (toRem(20), toRem(26), toRem(26))),
+    p1: (toRem(14), toRem(16), toRem(16), (toRem(18), toRem(20), toRem(20))),
+    p2: (toRem(12), toRem(14), toRem(14), (toRem(15), toRem(18), toRem(18))),
+    p3: (toRem(12), toRem(12), toRem(12), (toRem(15), toRem(15), toRem(15))),
+    p4: (toRem(10), toRem(10), toRem(10), (toRem(13), toRem(13), toRem(13))),
+);

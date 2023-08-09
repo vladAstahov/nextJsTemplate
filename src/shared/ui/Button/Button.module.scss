@@ -1,0 +1,23 @@
+.button {
+    padding: toRem(10) toRem(20);
+    border-radius: toRem(20);
+    box-sizing: border-box;
+
+    &--view {
+        &-primary {
+            background-color: rgba(98, 103, 223, 1);
+            border: 1px solid transparent;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        &-secondary {
+            background-color: transparent;
+            border: 1px solid rgba(98, 103, 223, 1);
+            color: rgba(0, 0, 0, 1);
+        }
+    }
+
+    @include media-desktop {
+        padding: toRem(15) toRem(30);
+    }
+}

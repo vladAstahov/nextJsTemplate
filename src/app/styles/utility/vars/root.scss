@@ -1,0 +1,84 @@
+@import './colors.scss';
+
+:root {
+    /* BASE */
+
+    --base: #{$base};
+    --system: #{$system};
+    --background: #{$background};
+    --secondary: #{$secondary};
+    --surface: #{$surface};
+    --brand: #{$brand};
+    --critical: #{$critical};
+    --blue: #{$blue};
+    --purple: #{$purple};
+    --orange: #{$orange};
+    --yellow: #{$yellow};
+    --green: #{$green};
+
+    /* TEXT */
+
+    --textBase: #{$textBase};
+    --textSecondary: #{$textSecondary};
+    --textSecondaryHover: #{$textSecondaryHover};
+    --textSurface: #{$textSurface};
+    --textBrand: #{$textBrand};
+    --textBrandHover: #{$textBrandHover};
+    --textCritical: #{$textCritical};
+
+    /* BACKGROUND */
+
+    --backgroundBase: #{$backgroundBase};
+    --backgroundSecondaryBase: #{$backgroundSecondaryBase};
+    --backgroundSurface: #{$backgroundSurface};
+    --backgroundSurfaceAlfa: #{$backgroundSurfaceAlfa};
+    --backgroundSecondary: #{$backgroundSecondary};
+    --backgroundBrand: #{$backgroundBrand};
+    --backgroundSystem: #{$backgroundSystem};
+    --backgroundTeacher: #{$backgroundTeacher};
+    --backgroundProduct1: #{$backgroundProduct1};
+    --backgroundProduct2: #{$backgroundProduct2};
+    --backgroundProduct3: #{$backgroundProduct3};
+    --backgroundProduct4: #{$backgroundProduct4};
+    --backgroundProduct5: #{$backgroundProduct5};
+
+    /* BORDER */
+
+    --borderBase: #{$borderBase};
+    --borderBaseHover: #{$borderBaseHover};
+    --borderSecondary: #{$borderSecondary};
+    --borderSecondaryHover: #{$borderSecondaryHover};
+    --borderPrimary: #{$borderPrimary};
+    --borderPrimaryHover: #{$borderPrimaryHover};
+    --borderCritical: #{$borderCritical};
+    --borderCriticalHover: #{$borderCriticalHover};
+
+    /* INTERACTIVE */
+
+    --controlSurfaceBackground: #{$controlSurfaceBackground};
+    --controlBrandBackground: #{$controlBrandBackground};
+    --controlBrandBackgroundHover: #{$controlBrandBackgroundHover};
+    --controlSecondaryBackground: #{$controlSecondaryBackground};
+    --controlSecondaryBackgroundHover: #{$controlSecondaryBackgroundHover};
+    --controlOutlineSecondaryBorder: #{$controlOutlineSecondaryBorder};
+    --controlOutlineSecondaryBorderHover: #{$controlOutlineSecondaryBorderHover};
+    --controlOutlineBrandBorder: #{$controlOutlineBrandBorder};
+    --controlOutlineBrandBorderHover: #{$controlOutlineBrandBorderHover};
+    --controlOutlineBrandText: #{$controlOutlineBrandText};
+    --controlOutlineBrandTextHovert: #{$controlOutlineBrandTextHover};
+    --controlSurfaceText: #{$controlSurfaceText};
+    --controlBrandText: #{$controlBrandText};
+    --controlBrandTextHover: #{$controlBrandTextHover};
+    --controlBaseText: #{$controlBaseText};
+    --controlBaseTextHover: #{$controlBaseTextHover};
+    --controlSecondaryBrandText: #{$controlSecondaryBrandText};
+
+    /* SHADOW */
+
+    --shadowBase: #{$shadowBase};
+    --shadowSecondary: #{$shadowSecondary};
+
+    /* GRADIENT */
+
+    --gradientWhite: #{$gradientWhite};
+}
