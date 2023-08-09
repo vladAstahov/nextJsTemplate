@@ -1,0 +1,74 @@
+.header {
+    padding-top: toRem(15);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(15);
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: toRem(22)
+    }
+
+    &__logo {
+        display: block;
+        font-family: 'Monotory';
+        font-size: toRem(20);
+        font-weight: 600;
+        background: linear-gradient(117deg, #6267DF 0%, #3BD9EE 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__description {
+        display: block;
+        font-size: toRem(11);
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        font-size: toRem(11);
+    }
+
+    @media (min-width: 1200px) {
+        padding-top: toRem(27);
+
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: toRem(1200);
+            margin: 0 auto;
+        }
+
+        &__main {
+            width: toRem(360);
+        }
+
+        &__menu {
+            width: toRem(460);
+        }
+
+        &__description {
+            font-size: toRem(16);
+        }
+
+        &__menu {
+            font-size: toRem(15);
+        }
+    }
+}

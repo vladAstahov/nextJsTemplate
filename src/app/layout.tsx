@@ -2,7 +2,8 @@ import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from "next/link";
-import styles from "./page.module.scss";
+import "./page.module.scss";
+import { Header } from '@/widgets/header';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <Link className={styles.link} href={'/'}>Home</Link>
-          <Link className={styles.link} href={'/feedback'}>Feedback</Link>
-        </header>
+        <Header />
         {children}
       </body>
     </html>
