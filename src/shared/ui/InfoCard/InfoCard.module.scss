@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+
+    @include media-desktop {
+        gap: 30px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(98, 103, 223, 1);
+    background-color: rgba(249, 249, 255, 1);
+
+    @include media-desktop {
+        width: 114px;
+        height: 114px;
+    }
+}
+
+.index {
+    font-family: $secondaryFontFamily;
+    font-size: 32px;
+    line-height: 39px;
+    color: rgba(60, 217, 238, 1);
+}
+
+.icon {
+    position: relative;
+    transition: 0.3s ease;
+    transition-property: transform;
+
+    color: rgba(0, 98, 141, 1);
+    font-size: 29px;
+
+    @include media-desktop {
+        &::after {
+            @include center(vertical);
+            right: 0;
+            content: "";
+            width: 1000%;
+            height: 100%;
+        }
+
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+}
+
+.title {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+    font-weight: 700;
+
+    @include media-desktop {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 20px;
+    }
+}
+
+.description {
+    font-size: 11px;
+    line-height: 16px;
+    opacity: 0.8;
+    margin-top: 10px;
+
+    @include media-desktop {
+        font-size: 13px;
+        line-height: 19px;
+    }
+}

@@ -1,83 +1,139 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/IconBase/IconBase.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.IconBase_iconBase__yVV0x {
+  display: inline-block;
+  font-weight: 400;
+  transition: 0.3s ease;
+  transition-property: opacity, color, transform;
+}
+.IconBase_iconBase__yVV0x::before {
+  font-family: "icon", sans-serif;
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  line-height: 1;
+}
+.IconBase_iconBase--placeholder__UezaR::before {
+  content: "\ea0a";
+}
+.IconBase_iconBase--plus__TWzDd::before {
+  content: "\ea0b";
+}
+.IconBase_iconBase--script__YN_V3::before {
+  content: "\ea0c";
+}
+.IconBase_iconBase--target__Pj5PC::before {
+  content: "\ea0d";
+}
+.IconBase_iconBase--teach__8fQ5z::before {
+  content: "\ea0e";
+}
+.IconBase_iconBase--tik-tok__Hde8j::before {
+  content: "\ea0f";
+}
+.IconBase_iconBase--book-open__3kkC_::before {
+  content: "\ea01";
+}
+.IconBase_iconBase--chevron-left__no6Gk::before {
+  content: "\ea02";
+}
+.IconBase_iconBase--chevron-right__V1WS_::before {
+  content: "\ea03";
+}
+.IconBase_iconBase--close__DIJpT::before {
+  content: "\ea04";
+}
+.IconBase_iconBase--facebook__NU44I::before {
+  content: "\ea05";
+}
+.IconBase_iconBase--headset__LmVPZ::before {
+  content: "\ea06";
+}
+.IconBase_iconBase--instagram__CA5Ro::before {
+  content: "\ea07";
+}
+.IconBase_iconBase--message__fE26B::before {
+  content: "\ea08";
+}
+.IconBase_iconBase--mood-happy__oc7DR::before {
+  content: "\ea09";
+}
+.IconBase_iconBase--trending-up__Wzibt::before {
+  content: "\ea10";
+}
+.IconBase_iconBase--user-plus__G6QCB::before {
+  content: "\ea11";
+}
+.IconBase_iconBase--users__ol9Iv::before {
+  content: "\ea12";
+}
+.IconBase_iconBase--vk__03eNl::before {
+  content: "\ea13";
+}
+.IconBase_iconBase--zap__5eWKA::before {
+  content: "\ea14";
+}
+.IconBase_iconBase--clock__Mm_5M::before {
+  content: "\ea15";
+}
+.IconBase_iconBase--repeat__U4ImP::before {
+  content: "\ea16";
+}
+.IconBase_iconBase--warning__LP_Kw::before {
+  content: "\ea17";
+}
+.IconBase_iconBase--check__i7MDt::before {
+  content: "\ea18";
+}
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/header/ui/Header/Header.module.scss ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/footer/ui/Footer/Footer.module.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.Header_header__Dqf0m {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+.Footer_root__myWwe {
+  border-top: 1px solid rgb(229, 229, 240);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.Header_container___yW_1 {
+.Footer_container__FVCWy {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.Header_main__t2bl_ {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 22px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-
-.Header_logo__YGu1H {
-  display: block;
-  font-family: "Montserrat";
-  font-size: 20px;
-  font-weight: 600;
-  background: linear-gradient(117deg, #6267DF 0%, #3BD9EE 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.Header_description__qjc_m {
-  display: block;
-  font-size: 11px;
-  flex: 1 1;
-}
-
-.Header_menu__pWdCw {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.Header_link__XgKme {
-  text-decoration: none;
-  display: block;
-  font-size: 11px;
-  color: #000;
-}
-
-@media (min-width: 1000px) {
-  .Header_header__Dqf0m {
-    padding-top: 27px;
-  }
-  .Header_container___yW_1 {
-    flex-direction: row;
-    justify-content: space-between;
+@media (min-width: 1300px) {
+  .Footer_container__FVCWy {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1200px;
-    margin: 0 auto;
   }
-  .Header_logo__YGu1H {
-    font-size: 28px;
-    width: auto;
-  }
-  .Header_menu__pWdCw {
-    width: 350px;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .Header_description__qjc_m {
-    font-size: 16px;
-    line-height: 19px;
-    width: 150px;
-  }
-  .Header_link__XgKme {
-    font-size: 15px;
-  }
+}
+
+.Footer_privacy__x_8oe {
+  opacity: 0.6;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.Footer_telegram__YurJg {
+  transition: 0.3s ease;
+  transition-property: opacity;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  opacity: 0.6;
+}
+.Footer_telegram__YurJg:hover {
+  opacity: 0.8;
+}
+
+.Footer_icon__o7Cv2 {
+  font-size: 29px;
+  color: rgb(0, 0, 0);
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/globals.scss ***!
@@ -872,4 +928,112 @@ textarea {
 
 .is-bold {
   font-weight: 700;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/header/ui/Header/Header.module.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Header_header__Dqf0m {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.Header_container___yW_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Header_main__t2bl_ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+
+.Header_logo__YGu1H {
+  display: block;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  background: linear-gradient(117deg, #6267DF 0%, #3BD9EE 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Header_description__qjc_m {
+  display: block;
+  font-size: 11px;
+  flex: 1 1;
+}
+
+.Header_menu__pWdCw {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.Header_link__XgKme {
+  display: block;
+  font-size: 11px;
+  color: #000;
+}
+@media (hover: hover), (min-width: 1200px) {
+  .Header_link__XgKme {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+    transition: 0.3s ease;
+    transition-property: color;
+  }
+  .Header_link__XgKme::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 0;
+    transition: 0.3s ease;
+    transition-property: transform;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(98, 103, 223);
+    transform: translateX(-110%);
+  }
+  .Header_link__XgKme:hover {
+    color: rgb(98, 103, 223);
+  }
+  .Header_link__XgKme:hover::after {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1000px) {
+  .Header_header__Dqf0m {
+    padding-top: 27px;
+  }
+  .Header_container___yW_1 {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .Header_logo__YGu1H {
+    font-size: 28px;
+    width: auto;
+  }
+  .Header_menu__pWdCw {
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Header_description__qjc_m {
+    font-size: 16px;
+    line-height: 19px;
+    width: 150px;
+  }
+  .Header_link__XgKme {
+    font-size: 15px;
+  }
 }

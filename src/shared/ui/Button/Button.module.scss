@@ -1,23 +1,54 @@
 .button {
-    padding: toRem(10) toRem(20);
-    border-radius: toRem(20);
+    padding: 10px 20px;
+    border-radius: 90px;
     box-sizing: border-box;
+    font-size: 11px;
+    line-height: 14px;
+
+    transition: 0.3s ease;
+    transition-property: background-color, box-shadow, color;
 
     &--view {
         &-primary {
             background-color: rgba(98, 103, 223, 1);
             border: 1px solid transparent;
             color: rgba(255, 255, 255, 1);
+
+            @include media-desktop {
+                &:hover {
+                    background-color: rgba(98, 50, 223, 1);
+                }
+            }
         }
 
         &-secondary {
             background-color: transparent;
-            border: 1px solid rgba(98, 103, 223, 1);
+            box-shadow: inset 0px 0px 0px 1px rgba(98, 103, 223, 1);
             color: rgba(0, 0, 0, 1);
+
+            @include media-desktop {
+                &:hover {
+                    box-shadow: inset 0px 0px 0px 4px rgba(98, 103, 223, 1);
+                    color: rgba(98, 103, 223, 1);
+                }
+            }
         }
     }
 
     @include media-desktop {
-        padding: toRem(15) toRem(30);
+        padding: 15px 30px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+.isBold {
+    font-family: $secondaryFontFamily;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include media-desktop {
+        font-size: 18px;
+        line-height: 22px;
     }
 }

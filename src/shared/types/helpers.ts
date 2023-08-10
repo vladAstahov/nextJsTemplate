@@ -21,3 +21,7 @@ export type IconName =
     | 'zap'
     | 'clock'
     | 'repeat'
+
+export type PropsDefault = {
+    className?: string
+}

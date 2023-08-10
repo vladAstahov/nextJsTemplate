@@ -38,15 +38,47 @@
 .menu {
     display: flex;
     flex-direction: row;
-    //justify-content: space-between;
     gap: 20px
 }
 
 .link {
-    text-decoration: none;
     display: block;
     font-size: 11px;
     color: #000;
+
+    @include media-hover-device {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 10px;
+        margin-bottom: -10px;
+
+        transition: 0.3s ease;
+        transition-property: color;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: calc(100% - 5px);
+            left: 0;
+
+            transition: 0.3s ease;
+            transition-property: transform;
+
+            height: 1px;
+            width: 100%;
+            background-color: rgba(98, 103, 223, 1);
+            transform: translateX(-110%);
+        }
+
+        &:hover {
+            color: rgba(98, 103, 223, 1);
+
+            &::after {
+                transform: translateX(0);
+            }
+        }
+    }
 }
 
 @media (min-width: 1000px) {
@@ -67,7 +99,7 @@
     }
 
     .menu {
-        width: 350px;
+        width: 200px;
         align-items: center;
         justify-content: space-between;
     }

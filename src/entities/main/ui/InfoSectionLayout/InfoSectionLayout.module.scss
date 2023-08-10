@@ -1,0 +1,39 @@
+.title {
+    position: relative;
+
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 116px;
+        height: 6px;
+        background-color: rgba(98, 103, 223, 1);
+        border-radius: 90px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+
+    @include media-desktop {
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+}
+
+.card {
+    width: calc(50% - 20px);
+
+    @include media-desktop {
+        width: 250px;
+    }
+}

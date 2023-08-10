@@ -1,0 +1,97 @@
+.root {
+    margin-top: 40px;
+}
+
+.container {
+    padding: 30px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #C8D1EA, #E2E0ED);
+    position: relative;
+    overflow: hidden;
+
+    @include media-desktop {
+        display: flex;
+        padding: 100px 80px;
+        background: linear-gradient(135deg, #D0D6E9, #E4E6F3, #A3B3D7);
+    }
+}
+
+.wrapper {
+    @include media-desktop {
+        width: 416px;
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include media-desktop {
+        font-size: 40px;
+    }
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 10px;
+
+    @include media-desktop {
+        font-size: 24px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: -13px;
+
+    @include media-desktop {
+        margin-top: 10px;
+    }
+}
+
+.info {
+    width: 50%;
+    margin-top: 13px;
+
+    @include media-desktop {
+        margin-top: 20px;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.image {
+    width: 178px;
+    margin-top: 16px;
+
+    @include media-desktop {
+        width: 464px;
+        aspect-ratio: 1;
+        position: absolute;
+        top: 8px;
+        right: 135px;
+        animation: 3s linear 1s animationName infinite;
+    }
+}
+
+
+@keyframes animationName {
+    0% {
+        transform: translateY(30px) rotate(10deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(30px) rotate(10deg);
+    }
+}

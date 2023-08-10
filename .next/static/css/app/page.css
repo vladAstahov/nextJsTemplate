@@ -1,9 +1,3 @@
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/page.module.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.page_main__akH3E {
-  flex: 1 1;
-}
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/IconBase/IconBase.module.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -95,17 +89,363 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/InfoRow/InfoRow.module.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.InfoRow_info-row__dcO6Y {
+.InfoRow_infoRow__x5aY0 {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 9px;
+}
+@media (min-width: 1200px) {
+  .InfoRow_infoRow__x5aY0 {
+    gap: 12px;
+  }
 }
 
 .InfoRow_icon__ZNCCD {
-  font-size: 24px;
+  font-size: 15px;
   color: rgb(98, 103, 223);
+}
+@media (min-width: 1200px) {
+  .InfoRow_icon__ZNCCD {
+    font-size: 24px;
+  }
 }
 
 .InfoRow_text__O_s5g {
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 19px;
   font-weight: 400;
+}
+@media (min-width: 1200px) {
+  .InfoRow_text__O_s5g {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/SectionLayout/SectionLayout.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.SectionLayout_container__sUsrG {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media (min-width: 1300px) {
+  .SectionLayout_container__sUsrG {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/Button/Button.module.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_button__wliYd {
+  padding: 10px 20px;
+  border-radius: 90px;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 14px;
+  transition: 0.3s ease;
+  transition-property: background-color, box-shadow, color;
+}
+.Button_button--view-primary__cWRgD {
+  background-color: rgb(98, 103, 223);
+  border: 1px solid transparent;
+  color: rgb(255, 255, 255);
+}
+@media (min-width: 1200px) {
+  .Button_button--view-primary__cWRgD:hover {
+    background-color: rgb(98, 50, 223);
+  }
+}
+.Button_button--view-secondary__m_8WR {
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 1px rgb(98, 103, 223);
+  color: rgb(0, 0, 0);
+}
+@media (min-width: 1200px) {
+  .Button_button--view-secondary__m_8WR:hover {
+    box-shadow: inset 0px 0px 0px 4px rgb(98, 103, 223);
+    color: rgb(98, 103, 223);
+  }
+}
+@media (min-width: 1200px) {
+  .Button_button__wliYd {
+    padding: 15px 30px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.Button_isBold__taXiK {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+@media (min-width: 1200px) {
+  .Button_isBold__taXiK {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/main/ui/NewQuiz/NewQuiz.module.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.NewQuiz_root__N8nmH {
+  margin-top: 40px;
+}
+
+.NewQuiz_container__9Peos {
+  padding: 30px 25px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #C8D1EA, #E2E0ED);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_container__9Peos {
+    display: flex;
+    padding: 100px 80px;
+    background: linear-gradient(135deg, #D0D6E9, #E4E6F3, #A3B3D7);
+  }
+}
+
+@media (min-width: 1200px) {
+  .NewQuiz_wrapper__yZGqZ {
+    width: 416px;
+  }
+}
+
+.NewQuiz_title__xzYyS {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_title__xzYyS {
+    font-size: 40px;
+  }
+}
+
+.NewQuiz_description__Ioy8X {
+  font-size: 16px;
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_description__Ioy8X {
+    font-size: 24px;
+  }
+}
+
+.NewQuiz_row__cg_2a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: -13px;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_row__cg_2a {
+    margin-top: 10px;
+  }
+}
+
+.NewQuiz_info__0qE1Y {
+  width: 50%;
+  margin-top: 13px;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_info__0qE1Y {
+    margin-top: 20px;
+  }
+}
+
+.NewQuiz_buttons__AI1Uv {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.NewQuiz_image__jWFvJ {
+  width: 178px;
+  margin-top: 16px;
+}
+@media (min-width: 1200px) {
+  .NewQuiz_image__jWFvJ {
+    width: 464px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 8px;
+    right: 135px;
+    animation: 3s linear 1s NewQuiz_animationName__TI1cG infinite;
+  }
+}
+
+@keyframes NewQuiz_animationName__TI1cG {
+  0% {
+    transform: translateY(30px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(30px) rotate(10deg);
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/page.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__akH3E {
+  flex: 1 1;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/InfoCard/InfoCard.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.InfoCard_header__3DuzU {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+@media (min-width: 1200px) {
+  .InfoCard_header__3DuzU {
+    gap: 30px;
+  }
+}
+
+.InfoCard_wrapper__kh7Fs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(98, 103, 223);
+  background-color: rgb(249, 249, 255);
+}
+@media (min-width: 1200px) {
+  .InfoCard_wrapper__kh7Fs {
+    width: 114px;
+    height: 114px;
+  }
+}
+
+.InfoCard_index__a2M6E {
+  font-family: "Montserrat";
+  font-size: 32px;
+  line-height: 39px;
+  color: rgb(60, 217, 238);
+}
+
+.InfoCard_icon__lzwN7 {
+  position: relative;
+  transition: 0.3s ease;
+  transition-property: transform;
+  color: rgb(0, 98, 141);
+  font-size: 29px;
+}
+@media (min-width: 1200px) {
+  .InfoCard_icon__lzwN7::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    content: "";
+    width: 1000%;
+    height: 100%;
+  }
+  .InfoCard_icon__lzwN7:hover {
+    transform: translateX(10px);
+  }
+}
+
+.InfoCard_title__792Dr {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .InfoCard_title__792Dr {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+  }
+}
+
+.InfoCard_description__4ZLM4 {
+  font-size: 11px;
+  line-height: 16px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  .InfoCard_description__4ZLM4 {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/entities/main/ui/InfoSectionLayout/InfoSectionLayout.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.InfoSectionLayout_title__8SN9c {
+  position: relative;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.InfoSectionLayout_title__8SN9c::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 116px;
+  height: 6px;
+  background-color: rgb(98, 103, 223);
+  border-radius: 90px;
+}
+
+.InfoSectionLayout_wrapper__sSZmv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .InfoSectionLayout_wrapper__sSZmv {
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+
+.InfoSectionLayout_card__zVXAV {
+  width: calc(50% - 20px);
+}
+@media (min-width: 1200px) {
+  .InfoSectionLayout_card__zVXAV {
+    width: 250px;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/main/ui/Scheme/Sheme.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Sheme_root__C1GTD {
+  margin-top: 30px;
+}
+@media (min-width: 1200px) {
+  .Sheme_root__C1GTD {
+    margin-top: 60px;
+  }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/main/ui/WinnerRules/WinnerRules.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.WinnerRules_root__hGNpa {
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+@media (min-width: 1200px) {
+  .WinnerRules_root__hGNpa {
+    margin-top: 60px;
+    padding-bottom: 40px;
+  }
 }

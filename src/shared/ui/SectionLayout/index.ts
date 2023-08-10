@@ -1,0 +1,1 @@
+export { SectioLayout, type SectioLayoutProps } from './SectionLayout'

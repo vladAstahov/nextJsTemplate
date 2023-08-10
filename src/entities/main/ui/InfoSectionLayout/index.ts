@@ -1,0 +1,1 @@
+export { InfoSectionLayout, type InfoSectionLayoutProps } from './InfoSectionLayout'

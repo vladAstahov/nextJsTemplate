@@ -1,5 +1,6 @@
-import React, {useMemo} from "react";
+import React, { useMemo } from "react";
 import styles from './Button.module.scss'
+import { PropsDefault } from "@/shared/types/helpers";
 
 export type ButtonProps = PropsDefault & React.PropsWithChildren & {
     view?: 'primary' | 'secondary'
@@ -9,18 +10,18 @@ export type ButtonProps = PropsDefault & React.PropsWithChildren & {
 }
 
 export const Button = React.memo<ButtonProps>(({
-   children,
-   ariaLabel,
-   view = 'primary',
-   isBold = false,
-   className
+    children,
+    ariaLabel,
+    view = 'primary',
+    isBold = false,
+    className
 }) => {
     const classes = useMemo(() => [
         styles.button,
         styles[`button--view-${view}`],
-        ...(isBold && 'is-bold'),
+        ...(isBold ? [styles.isBold] : []),
         className
     ].join(' '), [className, view])
 
-    return <button className={classes}>{ children }</button>
+    return <button className={classes}>{children}</button>
 })

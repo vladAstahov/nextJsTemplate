@@ -1,3 +1,5 @@
 export * from './ui/ClientWithFetch'
 export * from './ui/TitleInfo'
 export * from './ui/NewQuiz'
+export * from './ui/Scheme'
+export * from './ui/WinnerRules'
