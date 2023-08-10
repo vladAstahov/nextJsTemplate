@@ -1,0 +1,111 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/page.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__akH3E {
+  flex: 1 1;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/IconBase/IconBase.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.IconBase_iconBase__yVV0x {
+  display: inline-block;
+  font-weight: 400;
+  transition: 0.3s ease;
+  transition-property: opacity, color, transform;
+}
+.IconBase_iconBase__yVV0x::before {
+  font-family: "icon", sans-serif;
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  line-height: 1;
+}
+.IconBase_iconBase--placeholder__UezaR::before {
+  content: "\ea0a";
+}
+.IconBase_iconBase--plus__TWzDd::before {
+  content: "\ea0b";
+}
+.IconBase_iconBase--script__YN_V3::before {
+  content: "\ea0c";
+}
+.IconBase_iconBase--target__Pj5PC::before {
+  content: "\ea0d";
+}
+.IconBase_iconBase--teach__8fQ5z::before {
+  content: "\ea0e";
+}
+.IconBase_iconBase--tik-tok__Hde8j::before {
+  content: "\ea0f";
+}
+.IconBase_iconBase--book-open__3kkC_::before {
+  content: "\ea01";
+}
+.IconBase_iconBase--chevron-left__no6Gk::before {
+  content: "\ea02";
+}
+.IconBase_iconBase--chevron-right__V1WS_::before {
+  content: "\ea03";
+}
+.IconBase_iconBase--close__DIJpT::before {
+  content: "\ea04";
+}
+.IconBase_iconBase--facebook__NU44I::before {
+  content: "\ea05";
+}
+.IconBase_iconBase--headset__LmVPZ::before {
+  content: "\ea06";
+}
+.IconBase_iconBase--instagram__CA5Ro::before {
+  content: "\ea07";
+}
+.IconBase_iconBase--message__fE26B::before {
+  content: "\ea08";
+}
+.IconBase_iconBase--mood-happy__oc7DR::before {
+  content: "\ea09";
+}
+.IconBase_iconBase--trending-up__Wzibt::before {
+  content: "\ea10";
+}
+.IconBase_iconBase--user-plus__G6QCB::before {
+  content: "\ea11";
+}
+.IconBase_iconBase--users__ol9Iv::before {
+  content: "\ea12";
+}
+.IconBase_iconBase--vk__03eNl::before {
+  content: "\ea13";
+}
+.IconBase_iconBase--zap__5eWKA::before {
+  content: "\ea14";
+}
+.IconBase_iconBase--clock__Mm_5M::before {
+  content: "\ea15";
+}
+.IconBase_iconBase--repeat__U4ImP::before {
+  content: "\ea16";
+}
+.IconBase_iconBase--warning__LP_Kw::before {
+  content: "\ea17";
+}
+.IconBase_iconBase--check__i7MDt::before {
+  content: "\ea18";
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/InfoRow/InfoRow.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.InfoRow_info-row__dcO6Y {
+  display: flex;
+  gap: 12px;
+}
+
+.InfoRow_icon__ZNCCD {
+  font-size: 24px;
+  color: rgb(98, 103, 223);
+}
+
+.InfoRow_text__O_s5g {
+  font-size: 24px;
+  font-weight: 400;
+}

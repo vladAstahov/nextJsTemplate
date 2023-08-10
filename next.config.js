@@ -3,18 +3,18 @@ const path = require("path");
 const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
-        // prependData: `@import "@/app/globals.scss";`,
+        prependData: `@import "@/app/styles/additional.scss";`,
     }
 }
 
 module.exports = nextConfig
 
-// module.exports = (phase, { defaultConfig }) => {
-//     if ('sassOptions' in defaultConfig) {
-//         defaultConfig['sassOptions'] = {
-//             includePaths: ['./src'],
-//             prependData: `@import "@/app/globals.scss";`,
-//         }
-//     }
-//     return defaultConfig;
-// }
+module.exports = (phase, { defaultConfig }) => {
+    if ('sassOptions' in defaultConfig) {
+        defaultConfig['sassOptions'] = {
+            includePaths: ['./src'],
+            prependData: `@import "@/app/styles/additional.scss";`,
+        }
+    }
+    return defaultConfig;
+}

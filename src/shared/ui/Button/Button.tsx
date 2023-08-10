@@ -1,5 +1,5 @@
 import React, {useMemo} from "react";
-import './Button.module.scss'
+import styles from './Button.module.scss'
 
 export type ButtonProps = PropsDefault & React.PropsWithChildren & {
     view?: 'primary' | 'secondary'
@@ -16,8 +16,8 @@ export const Button = React.memo<ButtonProps>(({
    className
 }) => {
     const classes = useMemo(() => [
-        'button',
-        `button--view-${view}`,
+        styles.button,
+        styles[`button--view-${view}`],
         ...(isBold && 'is-bold'),
         className
     ].join(' '), [className, view])
