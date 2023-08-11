@@ -17,56 +17,6 @@
     }
 }
 
-.wrapper {
-    @include media-desktop {
-        width: 416px;
-    }
-}
-
-.title {
-    font-size: 24px;
-    font-weight: 700;
-
-    @include media-desktop {
-        font-size: 40px;
-    }
-}
-
-.description {
-    font-size: 16px;
-    margin-top: 10px;
-
-    @include media-desktop {
-        font-size: 24px;
-    }
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: -13px;
-
-    @include media-desktop {
-        margin-top: 10px;
-    }
-}
-
-.info {
-    width: 50%;
-    margin-top: 13px;
-
-    @include media-desktop {
-        margin-top: 20px;
-    }
-}
-
-.buttons {
-    display: flex;
-    gap: 14px;
-    margin-top: 22px;
-}
-
 .image {
     width: 178px;
     margin-top: 16px;

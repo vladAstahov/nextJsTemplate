@@ -1,0 +1,1 @@
+export { NewQuizInfo } from './NewQuizInfo'
