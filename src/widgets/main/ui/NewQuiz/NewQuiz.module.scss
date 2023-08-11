@@ -77,12 +77,12 @@
         position: absolute;
         top: 8px;
         right: 135px;
-        animation: 3s linear 1s animationName infinite;
+        animation: 3s linear 1s decorationAnimation infinite;
     }
 }
 
 
-@keyframes animationName {
+@keyframes decorationAnimation {
     0% {
         transform: translateY(30px) rotate(10deg);
     }

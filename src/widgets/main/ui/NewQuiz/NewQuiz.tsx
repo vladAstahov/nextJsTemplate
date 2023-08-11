@@ -8,6 +8,7 @@ import { SectioLayout } from "@/shared/ui/SectionLayout";
 import { Button } from "@/shared/ui/Button";
 import Image from "next/image";
 import { useDevice } from "@/shared/lib/utils/useDevice";
+import {PromoCode} from "@/feature/main";
 
 export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
     const { device } = useDevice()
@@ -20,7 +21,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
                 <Image
                     className={styles.image}
                     style={{
-                        animationName: styles.animationName
+                        animationName: styles.decorationAnimation
                     }}
                     src="/images/decoration.png"
                     alt="Декорация"
@@ -36,7 +37,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
                 <InfoRow className={styles.info} icon={'placeholder'} text={'Участников: 12'} />
             </div>
             <div className={styles.buttons}>
-                <Button view="secondary" ariaLabel="Ввести промокод" onPress={() => { }}>Ввести промокод</Button>
+                <PromoCode />
                 <Button ariaLabel="Оплатить" onPress={() => { }}>Оплатить</Button>
             </div>
         </div>
@@ -44,7 +45,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
             <Image
                 className={styles.image}
                 style={{
-                    animationName: styles.animationName
+                    animationName: styles.decorationAnimation
                 }}
                 src="/images/decoration.png"
                 alt="Декорация"

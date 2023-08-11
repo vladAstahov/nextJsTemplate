@@ -14,7 +14,8 @@ export const Button = React.memo<ButtonProps>(({
     ariaLabel,
     view = 'primary',
     isBold = false,
-    className
+    className,
+    onPress
 }) => {
     const classes = useMemo(() => [
         styles.button,
@@ -23,5 +24,12 @@ export const Button = React.memo<ButtonProps>(({
         className
     ].join(' '), [className, view])
 
-    return <button className={classes}>{children}</button>
+    return (
+        <button
+            aria-label={ariaLabel}
+            className={classes}
+            onClick={onPress}>
+            {children}
+        </button>
+    )
 })

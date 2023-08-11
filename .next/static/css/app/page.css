@@ -188,6 +188,83 @@
     line-height: 22px;
   }
 }
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/shared/ui/Modal/Modal.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Modal_modal__AF7If {
+  transition: 0.3s ease;
+  transition-property: opacity;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  background: rgba(6, 30, 40, 0.9);
+  -webkit-backdrop-filter: blur(11.5px);
+          backdrop-filter: blur(11.5px);
+}
+
+.Modal_is-active__ZnYZ9 {
+  opacity: 1;
+}
+
+.Modal_wrapper__jsB5H {
+  transition: 0.3s ease;
+  transition-property: opacity, transform;
+  width: 360px;
+  border-radius: 10px;
+  border: 1px solid rgb(192, 192, 192);
+  background: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 27px;
+  padding: 18px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(calc(-100% - 27px));
+}
+@media (min-width: 1200px) {
+  .Modal_wrapper__jsB5H {
+    width: 450px;
+    margin-top: 121px;
+  }
+}
+
+.Modal_is-active-wrapper__1WhYJ {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Modal_button__rp8ns {
+  transition: 0.3s ease;
+  transition-property: color;
+  position: relative;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  color: rgb(177, 177, 177);
+}
+.Modal_button__rp8ns::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+}
+.Modal_button__rp8ns:hover {
+  color: rgb(197, 197, 197);
+}
+
+.Modal_icon__oyMIn {
+  font-size: 22px;
+}
+
+.Modal_children__f547n {
+  width: 100%;
+}
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/widgets/main/ui/NewQuiz/NewQuiz.module.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -276,11 +353,11 @@
     position: absolute;
     top: 8px;
     right: 135px;
-    animation: 3s linear 1s NewQuiz_animationName__TI1cG infinite;
+    animation: 3s linear 1s NewQuiz_decorationAnimation__mmWzL infinite;
   }
 }
 
-@keyframes NewQuiz_animationName__TI1cG {
+@keyframes NewQuiz_decorationAnimation__mmWzL {
   0% {
     transform: translateY(30px) rotate(10deg);
   }
