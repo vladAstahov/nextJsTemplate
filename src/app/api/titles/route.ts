@@ -1,7 +1,10 @@
+// @ts-ignore
 import prisma from '../../../../lib/prisma'
-import {NextResponse} from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req, {params}) {
+// @ts-ignore
+export async function GET(req: NextRequest, { params }) {
+    // @ts-ignore
     const titles = await prisma.title.findMany()
 
     return NextResponse.json({
@@ -9,10 +12,12 @@ export async function GET(req, {params}) {
     })
 }
 
+// @ts-ignore
 export async function POST(req) {
     if (req.method === 'POST') {
         console.log(req.body)
         const body = JSON.parse(req.body)
+        // @ts-ignore
         const result = await prisma.title.create({
             data: {
                 title: body.title

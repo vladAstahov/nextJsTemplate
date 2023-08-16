@@ -1,4 +1,5 @@
-import {makeRequest} from "@/shared/lib/request/makeRequest";
+import { makeRequest } from "@/shared/lib/request/makeRequest";
+import { Title } from "@/widgets/main/model";
 
 export type MainApi = {
     getTitle: (params: {
@@ -10,16 +11,11 @@ export type MainApi = {
         }
     }>,
     getTitles: () => Promise<{
-        titles: {
-            id: string,
-            title: string
-        }[]
+        titles: Title[]
     }>
     addTitle: (params: {
         title: string
-    }) => Promise<{
-        void
-    }>
+    }) => Promise<void>
 }
 
 export const mainApi: MainApi = {

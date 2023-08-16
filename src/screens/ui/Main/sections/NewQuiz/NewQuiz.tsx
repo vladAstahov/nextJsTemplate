@@ -2,10 +2,11 @@
 
 import React from "react";
 import styles from './NewQuiz.module.scss'
-import {useDevice} from "@/shared/lib/utils/useDevice";
-import {SectioLayout} from "@/shared/ui/SectionLayout";
+import { useDevice } from "@/shared/lib/utils/useDevice";
+import { SectioLayout } from "@/shared/ui/SectionLayout";
 import Image from "next/image";
-import {NewQuizInfo} from "@/widgets/main";
+import { NewQuizInfo } from "@/widgets/main";
+import { PropsDefault } from "@/shared/types/helpers";
 
 export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
     const { device } = useDevice()

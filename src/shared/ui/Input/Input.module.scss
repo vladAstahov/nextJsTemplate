@@ -1,0 +1,37 @@
+.input {
+    transition: 0.3s ease;
+    transition-property: border-color;
+
+    display: block;
+    padding: 16px 25px;
+    font-size: 12px;
+    color: #000;
+    outline: none;
+    border: 1px solid rgba(190, 190, 190, 0.9);
+    border-color: rgba(190, 190, 190, 0.9);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 90px;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: rgba(144, 144, 144, 1);
+    }
+
+    @include media-desktop {
+        padding: 22px 25px;
+
+        &:hover {
+            border-color: rgba(98, 103, 223, 1);
+        }
+    }
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.is-error {
+    border-color: rgba(255, 89, 86, 1);
+}

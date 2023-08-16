@@ -6,7 +6,7 @@ import { useRef } from 'react';
  */
 export const useScrollDisable = () => {
     const scrollBlocked = useRef<boolean>();
-    if (document) {
+    if (process.browser) {
         const html = document.documentElement;
         const { body } = document;
 
@@ -50,7 +50,7 @@ export const useScrollDisable = () => {
     }
 
     return {
-        blockScroll: () => {},
-        allowScroll: () => {}
+        blockScroll: () => { },
+        allowScroll: () => { }
     };
 };

@@ -1,0 +1,36 @@
+.authForm {
+    width: 360px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #C0C0C0;
+
+    @include media-desktop {
+        width: 450px;
+        padding: 40px 30px;
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include media-desktop {
+        font-size: 26px;
+    }
+}
+
+.field {
+    margin-top: 20px;
+
+    @include media-maxTablet {
+        &:nth-child(1) {
+            margin-top: 25px;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    margin-top: 20px;
+}

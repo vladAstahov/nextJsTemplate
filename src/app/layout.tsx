@@ -1,8 +1,6 @@
 import React from "react";
 import './globals.scss'
 import type { Metadata } from 'next'
-import { Header } from '@/widgets/header';
-import { Footer } from '@/widgets/footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   )

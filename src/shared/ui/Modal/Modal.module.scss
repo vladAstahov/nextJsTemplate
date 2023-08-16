@@ -11,6 +11,26 @@
     opacity: 0;
     background: rgba(6, 30, 40, 0.90);
     backdrop-filter: blur(11.5px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: toRem(4);
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        //background-color: $backgroundBase;
+        border-radius: toRem(4);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        //background-color: $borderBase;
+        border-radius: toRem(4);
+    }
 }
 
 .is-active {

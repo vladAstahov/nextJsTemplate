@@ -1,8 +1,8 @@
 "use client";
 
-import {mainModel, Title} from "@/widgets/main/model";
-import {useEffect, useState} from "react";
-import {useParams} from "next/navigation";
+import { mainModel, Title } from "@/widgets/main/model";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 export const TitleInfo = () => {
     const { onFetch, isLoading } = mainModel.useTitle()
@@ -11,7 +11,7 @@ export const TitleInfo = () => {
 
     useEffect(() => {
         onFetch(Number(id)).then(response => {
-            setTitle(response.title)
+            setTitle(response?.title)
         })
     }, [id])
 

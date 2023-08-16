@@ -1,5 +1,3 @@
 export * from './ui/ClientWithFetch'
 export * from './ui/TitleInfo'
 export * from './ui/NewQuizInfo'
-export * from '../../pages/ui/Main/sections/Scheme'
-export * from '../../pages/ui/Main/sections/WinnerRules'

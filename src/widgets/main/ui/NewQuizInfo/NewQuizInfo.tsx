@@ -1,14 +1,15 @@
 "use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from './NewQuizInfo.module.scss'
 import { InfoRow } from "@/shared/ui/InfoRow";
 import { PropsDefault } from "@/shared/types/helpers";
 import { Button } from "@/shared/ui/Button";
-import {Modal} from "@/shared/ui/Modal";
+import { PromoModal } from "@/features/promoCode/ui";
 
 export const NewQuizInfo = React.memo<PropsDefault & React.PropsWithChildren>(({ className, children }) => {
-    const [ isVisible, setIsVisible ] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
+    const [value, setValue] = useState('')
 
     return (
         <>
@@ -32,9 +33,7 @@ export const NewQuizInfo = React.memo<PropsDefault & React.PropsWithChildren>(({
                     <Button ariaLabel="Оплатить" onPress={() => { }}>Оплатить</Button>
                 </div>
             </div>
-            <Modal isVisible={isVisible} onClose={() => setIsVisible(false)}>
-                <h1>Content</h1>
-            </Modal>
+            <PromoModal isVisible={isVisible} onClose={() => setIsVisible(false)} />
         </>
     )
 })

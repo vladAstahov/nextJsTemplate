@@ -1,17 +1,18 @@
-import React, {useEffect, useState} from "react";
-import {IconBase} from "@/shared/ui/IconBase";
+import React, { useEffect, useState } from "react";
+import { IconBase } from "@/shared/ui/IconBase";
 import styles from './Modal.module.scss'
-import {useScrollDisable} from "@/shared/lib/utils/useScrollDisable";
+import { useScrollDisable } from "@/shared/lib/utils/useScrollDisable";
 
 export type ModalProps = React.PropsWithChildren & {
+    wrapperClassname?: string
     isVisible: boolean
     onClose: () => void
 }
 
-let timeout
+let timeout: NodeJS.Timeout
 
 export const Modal = React.memo<ModalProps>(
-    ({ isVisible, onClose, children }) => {
+    ({ isVisible, onClose, children, wrapperClassname }) => {
         const [isAnimation, setIsAnimation] = useState(false)
         const [isShow, setIsShow] = useState(false)
         const { blockScroll, allowScroll } = useScrollDisable()
@@ -23,7 +24,7 @@ export const Modal = React.memo<ModalProps>(
                 timeout = setTimeout(() => {
                     setIsAnimation(true)
                 }, 100)
-            } else{
+            } else {
                 setIsAnimation(false)
                 allowScroll()
                 timeout = setTimeout(() => {
@@ -39,12 +40,12 @@ export const Modal = React.memo<ModalProps>(
         return <>
             {isShow && (
                 <div
-                    className={`${styles.modal} ${isAnimation ? styles['is-active']: ''}`}
-                    onClick={onClose}>
+                    className={`${styles.modal} ${isAnimation ? styles['is-active'] : ''}`}
+                >
                     <div
-                        className={`${styles.wrapper} ${isAnimation ? styles['is-active-wrapper']: ''}`}>
-                        <button className={styles.button}>
-                            <IconBase className={styles.icon} name={'close'}/>
+                        className={`${styles.wrapper} ${wrapperClassname} ${isAnimation ? styles['is-active-wrapper'] : ''}`}>
+                        <button className={styles.button} onClick={onClose}>
+                            <IconBase className={styles.icon} name={'close'} />
                         </button>
                         <div className={styles.children}>
                             {children}

@@ -6,7 +6,7 @@
     line-height: 14px;
 
     transition: 0.3s ease;
-    transition-property: background-color, box-shadow, color;
+    transition-property: background-color, box-shadow, color, opacity;
 
     &--view {
         &-primary {
@@ -51,4 +51,9 @@
         font-size: 18px;
         line-height: 22px;
     }
+}
+
+.isDisabled {
+    pointer-events: none;
+    opacity: 0.6;
 }

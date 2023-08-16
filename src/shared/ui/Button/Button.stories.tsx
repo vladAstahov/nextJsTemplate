@@ -13,5 +13,4 @@ export const Default = Template.bind({})
 
 Default.args = {
     view: 'primary',
-    size: 'medium'
 }
