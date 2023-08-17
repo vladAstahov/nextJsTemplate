@@ -6,12 +6,6 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/quiz/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/quiz/login/page.css",
-      "static/chunks/app/quiz/login/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -21,7 +15,14 @@
     "/quiz/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/quiz/[id]/page.css",
       "static/chunks/app/quiz/[id]/page.js"
+    ],
+    "/quiz/[id]/result/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/quiz/[id]/result/page.css",
+      "static/chunks/app/quiz/[id]/result/page.js"
     ]
   }
 }

@@ -1,0 +1,96 @@
+.root {
+    cursor: pointer;
+    transition: 0.3s ease;
+    transition-property: color;
+    display: flex;
+    gap: 10px;
+    color: #000;
+    font-size: 14px;
+    align-items: center;
+
+    &--view {
+        &-success {
+            color: rgba(2, 188, 125, 1);
+        }
+
+        &-critical {
+            color: rgba(238, 9, 36, 1);
+        }
+    }
+
+    @include media-desktop {
+        font-size: 16px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    @include media-desktop {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.radio {
+    transition: 0.3s ease;
+    transition-property: border-color;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(190, 190, 190, 0.90);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &::after {
+        content: "";
+        position: absolute;
+        transition: 0.3s ease;
+        transition-property: opacity, transform;
+        background-color: #333;
+        border-radius: 50%;
+
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    @include media-desktop {
+        width: 28px;
+        height: 28px;
+
+        &::after {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.is-active {
+    border-color: #333;
+    transition-property: opacity;
+
+    &::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.icon {
+    @include center();
+    transition: 0.3s ease;
+    transition-property: opacity;
+
+    font-size: 28px;
+    opacity: 0;
+}
+
+.is-icon {
+    opacity: 1;
+}
