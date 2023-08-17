@@ -1,5 +1,10 @@
 {
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/quiz/[id]/page": "app/quiz/[id]/page.js",
-  "/quiz/[id]/result/page": "app/quiz/[id]/result/page.js"
+  "/api/titles/route": "app/api/titles/route.js",
+  "/api/[id]/route": "app/api/[id]/route.js",
+  "/quiz/1/page": "app/quiz/1/page.js",
+  "/quiz/login/page": "app/quiz/login/page.js",
+  "/title/[id]/page": "app/title/[id]/page.js",
+  "/quiz/1/result/page": "app/quiz/1/result/page.js"
 }
