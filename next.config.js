@@ -21,7 +21,7 @@ module.exports = (phase, { defaultConfig }) => {
     }
 
     defaultConfig['output'] = 'export'
-    defaultConfig['basePath'] = '/quiz'
+    defaultConfig['basePath'] = '/quizJS'
 
     return defaultConfig;
 }
