@@ -1,8 +1,8 @@
 @mixin newFont($family, $pathName, $weight, $style: normal) {
     @font-face {
         font-family: '#{$family}';
-        src: url('/quiz/fonts/#{$pathName}.woff2') format('woff2'),
-        url('/quiz/fonts/#{$pathName}.woff') format('woff');
+        src: url('/quizJS/fonts/#{$pathName}.woff2') format('woff2'),
+        url('/quizJS/fonts/#{$pathName}.woff') format('woff');
         font-weight: #{$weight};
         font-style: $style;
         font-display: swap;

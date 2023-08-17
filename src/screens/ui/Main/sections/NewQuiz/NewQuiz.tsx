@@ -4,7 +4,7 @@ import React from "react";
 import styles from './NewQuiz.module.scss'
 import { useDevice } from "@/shared/lib/utils/useDevice";
 import { SectioLayout } from "@/shared/ui/SectionLayout";
-import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component"
 import { NewQuizInfo } from "@/widgets/main";
 import { PropsDefault } from "@/shared/types/helpers";
 
@@ -14,7 +14,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
     return <SectioLayout className={`${styles.root} ${className}`} containerClassname={styles.container}>
         <NewQuizInfo>
             {!device.desktop && (
-                <Image
+                <LazyLoadImage
                     className={styles.image}
                     style={{
                         animationName: styles.decorationAnimation
@@ -28,7 +28,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
             )}
         </NewQuizInfo>
         {device.desktop && (
-            <Image
+            <LazyLoadImage
                 className={styles.image}
                 style={{
                     animationName: styles.decorationAnimation
