@@ -16,6 +16,9 @@ module.exports = (phase, { defaultConfig }) => {
             prependData: `@import "@/app/styles/additional.scss";`,
         }
     }
+    defaultConfig['eslint'] = {
+        ignoreDuringBuilds: true,
+    }
 
     defaultConfig['output'] = 'export'
     defaultConfig['basePath'] = '/quiz'

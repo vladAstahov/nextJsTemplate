@@ -244,7 +244,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 4657:
+/***/ 757:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -280,7 +280,7 @@ const tree = {
         children: ['__PAGE__', {}, {
           page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1895)), "C:\\Users\\Vladislav\\Desktop\\projects\\nextJsTemplate\\src\\app\\page.tsx"],
           metadata: {
-    icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3881))).default(props))],
+    icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4242))).default(props))],
     apple: [],
     openGraph: [],
     twitter: [],
@@ -291,7 +291,7 @@ const tree = {
         {
           'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4053)), "C:\\Users\\Vladislav\\Desktop\\projects\\nextJsTemplate\\src\\app\\layout.tsx"],
           metadata: {
-    icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3881))).default(props))],
+    icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4242))).default(props))],
     apple: [],
     openGraph: [],
     twitter: [],
@@ -332,12 +332,12 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 3819:
+/***/ 4858:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3180));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 954, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 584));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3180))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 584))
 
 /***/ }),
 
@@ -1651,7 +1651,7 @@ function Home() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [587,482,998,209,845,383,354], () => (__webpack_exec__(4657)));
+var __webpack_exports__ = __webpack_require__.X(0, [587,482,998,354,845,383,268], () => (__webpack_exec__(757)));
 module.exports = __webpack_exports__;
 
 })();
