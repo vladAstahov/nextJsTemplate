@@ -1,10 +1,5 @@
 {
-  "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/[id]/route": "app/api/[id]/route.js",
-  "/api/titles/route": "app/api/titles/route.js",
-  "/quiz/1/page": "app/quiz/1/page.js",
-  "/quiz/login/page": "app/quiz/login/page.js",
-  "/title/[id]/page": "app/title/[id]/page.js",
-  "/quiz/1/result/page": "app/quiz/1/result/page.js"
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/login/api/route": "app/admin/login/api/route.js"
 }

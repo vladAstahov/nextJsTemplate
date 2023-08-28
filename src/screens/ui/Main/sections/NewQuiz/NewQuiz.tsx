@@ -19,7 +19,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
                     style={{
                         animationName: styles.decorationAnimation
                     }}
-                    src="/quizJS/images/decoration.png"
+                    src="images/decoration.png"
                     alt="Декорация"
                     width={464}
                     height={464}
@@ -33,7 +33,7 @@ export const NewQuiz = React.memo<PropsDefault>(({ className }) => {
                 style={{
                     animationName: styles.decorationAnimation
                 }}
-                src="/quizJS/images/decoration.png"
+                src="images/decoration.png"
                 alt="Декорация"
                 width={464}
                 height={464}

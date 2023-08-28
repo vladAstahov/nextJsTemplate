@@ -20,8 +20,8 @@ module.exports = (phase, { defaultConfig }) => {
         ignoreDuringBuilds: true,
     }
 
-    defaultConfig['output'] = 'export'
-    defaultConfig['basePath'] = '/quizJS'
+    // defaultConfig['output'] = 'export'
+    // defaultConfig['basePath'] = '/quizJS'
 
     return defaultConfig;
 }

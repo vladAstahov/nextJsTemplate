@@ -10,7 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Title {
+model Admin {
     id String    @id @default(cuid())
-    title String
+    login String @unique
+    password String
 }
