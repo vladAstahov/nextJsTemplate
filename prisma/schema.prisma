@@ -11,7 +11,30 @@ datasource db {
 }
 
 model Admin {
-    id String    @id @default(cuid())
-    login String @unique
-    password String
+  id       String @id @default(cuid())
+  login    String @unique
+  password String
+}
+
+model Quiz {
+  id         String  @unique @default(cuid())
+  name       String
+  active     Boolean
+  link       String
+  usersLimit Int
+}
+
+model Question {
+  id     String @unique @default(cuid())
+  quizId String
+  text   String
+  image  String
+  index  Int
+}
+
+model Answer {
+  id         String  @unique @default(cuid())
+  questionId String
+  text       String
+  isCorrect  Boolean
 }

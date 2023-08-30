@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(200, 209, 234), rgb(242, 232, 230));
+
+    @include media-desktop {
+        background: linear-gradient(135deg, rgb(200, 209, 234), rgb(242, 232, 230), rgb(158, 176, 215));
+    }
+}
