@@ -7,3 +7,7 @@ export default function Quiz() {
         <Questions />
     </main>
 }
+
+const Waiting = () => (
+    <h1>Quiz not started, yet</h1>
+)

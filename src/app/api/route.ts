@@ -9,7 +9,6 @@ export async function GET() {
     })
 
     if (activeQuiz) {
-
         console.log(activeQuiz)
         return NextResponse.json({
             quiz: {

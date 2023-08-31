@@ -2,6 +2,7 @@
 
 import { isAuthAdminModel } from "@/entities/admin/model";
 import { adminStorage } from "@/shared/storage/admin";
+import { Header } from "@/widgets/header";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -16,7 +17,7 @@ export default function AdminMain() {
         }
     })
 
-    return <main>
-        <p>Admin main</p>
-    </main>
+    return <>
+        <Header />
+    </>
 }

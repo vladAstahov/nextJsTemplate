@@ -22,6 +22,7 @@ model Quiz {
   active     Boolean
   link       String
   usersLimit Int
+  started    Boolean @default(false)
 }
 
 model Question {
@@ -37,4 +38,12 @@ model Answer {
   questionId String
   text       String
   isCorrect  Boolean
+}
+
+model Main {
+  id          Int    @unique @default(1)
+  title       String
+  description String
+  time        String
+  date        String
 }
