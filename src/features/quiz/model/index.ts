@@ -1,6 +1,7 @@
-import { createStore, createEvent, sample } from 'effector'
+import { createStore, createEvent, sample, createEffect } from 'effector'
 import { useStore, useUnit } from 'effector-react'
 import { type Question, type Quiz, type Answer } from './types'
+import { quizApi } from '@/shared/api'
 
 const updateQuiz = createEvent<Partial<Quiz>>()
 
@@ -21,6 +22,8 @@ const addAnswer = createEvent<{
     questionId: Question['id']
 }>()
 
+const resetQuiz = createEvent()
+
 const $quiz = createStore<Quiz>({
     name: '',
     active: false,
@@ -29,7 +32,7 @@ const $quiz = createStore<Quiz>({
 }).on(updateQuiz, (state, payload) => ({
     ...state,
     ...payload
-}))
+})).reset(resetQuiz)
 
 const $questions = createStore<Question[]>([
     {
@@ -59,7 +62,7 @@ const $questions = createStore<Question[]>([
         state.splice(endIndex, 0, removed);
 
         return state
-    })
+    }).reset(resetQuiz)
 
 const $answers = createStore<Record<Answer['questionId'], Answer[]>>({
     '1': [
@@ -120,7 +123,33 @@ const $answers = createStore<Record<Answer['questionId'], Answer[]>>({
                 isCorrect: false
             }
         ]
-    }))
+    })).reset(resetQuiz)
+
+sample({
+    source: {
+        answers: $answers,
+        questions: $questions,
+    },
+    clock: addQuestion,
+    fn: ({ answers, questions }) => ({
+        ...answers,
+        [questions.length + 1]: [
+            {
+                id: '1',
+                questionId: String(questions.length + 1),
+                text: '',
+                isCorrect: true
+            },
+            {
+                id: '2',
+                questionId: String(questions.length + 1),
+                text: '',
+                isCorrect: false
+            },
+        ]
+    }),
+    target: $answers
+})
 
 sample({
     source: {
@@ -139,6 +168,46 @@ sample({
         })
     }),
     target: $answers
+})
+
+const createQuizFx = createEffect(quizApi.createQuiz)
+const createQuiz = createEvent()
+
+sample({
+    source: {
+        quiz: $quiz,
+        answers: $answers,
+        questions: $questions
+    },
+    clock: createQuiz,
+    fn: data => ({
+        quiz: {
+            name: data.quiz.name,
+            active: data.quiz.active,
+            link: data.quiz.link,
+            usersLimit: data.quiz.limit
+        },
+        answers: Object.values(data.answers).reduce((prev, curr) => [...prev, ...curr], []),
+        questions: data.questions
+    }),
+    target: createQuizFx
+})
+
+const resetCreated = createEvent()
+const $created = createStore<boolean>(false).reset(resetCreated)
+
+sample({
+    clock: createQuizFx.doneData,
+    fn: () => true,
+    target: $created
+})
+sample({
+    source: {
+        created: $created
+    },
+    clock: $created,
+    filter: ({ created }) => created,
+    target: resetQuiz
 })
 
 const useQuiz = () => {
@@ -162,8 +231,16 @@ const useAnswers = () => ({
     add: useUnit(addAnswer)
 })
 
+const useCreate = () => ({
+    create: useUnit(createQuiz),
+    isLoading: useStore(createQuizFx.pending),
+    isCreated: useStore($created),
+    reset: useUnit(resetCreated)
+})
+
 export const quizModel = {
     useQuiz,
     useQuestions,
-    useAnswers
+    useAnswers,
+    useCreate
 }

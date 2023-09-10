@@ -1,12 +1,13 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { quizModel } from "@/features/quiz/model";
 import { Input } from "@/shared/ui/Input";
 import { RadioToggle } from "@/shared/ui/RadioToggle";
 import { Divider } from "@/shared/ui/Divider";
 import styles from './AddQuizForm.module.scss'
 import { Button } from "@/shared/ui/Button";
+import { useRouter } from "next/navigation";
 
 export type AddQuizFormProps = {
     questions: ReactNode
@@ -15,6 +16,17 @@ export type AddQuizFormProps = {
 
 export const AddQuizForm = React.memo<AddQuizFormProps>(({ questions, answers }) => {
     const { quiz, update } = quizModel.useQuiz()
+    const { create, isLoading, isCreated, reset } = quizModel.useCreate()
+
+    const { replace } = useRouter()
+
+    useEffect(() => {
+        console.log(isCreated)
+        if (isCreated) {
+            replace('/admin/list')
+            reset()
+        }
+    }, [isCreated, replace])
 
     return <div className={styles.root}>
         <Input
@@ -55,7 +67,8 @@ export const AddQuizForm = React.memo<AddQuizFormProps>(({ questions, answers })
             className={styles.button}
             ariaLabel="Сохранить"
             isBold={true}
-            onPress={() => { }}>
+            isDisabled={isLoading}
+            onPress={create}>
             Сохранить
         </Button>
     </div>

@@ -8,7 +8,7 @@ export type Quiz = {
 export type Question = {
     id: string,
     text: string
-    file?: string
+    image?: string
 }
 
 export type Answer = {
