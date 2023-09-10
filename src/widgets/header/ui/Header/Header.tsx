@@ -2,12 +2,15 @@
 
 import Link from 'next/link';
 import styles from './Header.module.scss'
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { Button } from '@/shared/ui/Button';
 
 const isAdminRoute = (pathname: string) => pathname.includes('admin')
+const isAddRoute = (pathname: string) => pathname.includes('add')
 
 export const Header = () => {
     const pathname = usePathname()
+    const { push } = useRouter()
 
     return <header className={styles.header}>
         <div className={styles.container}>
@@ -29,6 +32,9 @@ export const Header = () => {
                         </>
                     )}
             </div>
+            {isAdminRoute(pathname) && !isAddRoute(pathname) && (
+                <Button ariaLabel='Добавить' onPress={() => push('/admin/add')}>Добавить</Button>
+            )}
         </div>
     </header>
 }

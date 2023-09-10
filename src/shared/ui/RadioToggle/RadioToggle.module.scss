@@ -1,0 +1,42 @@
+.root {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.span {
+    transition: 0.3s ease;
+    transition-property: border-color;
+
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(190, 190, 190, 0.9);
+
+    &::after {
+        transition: 0.3s ease;
+        transition-property: opacity, background-color, transform;
+
+        @include center();
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-color: rgba(2, 188, 125, 1);
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+.is-active {
+    border-color: rgba(2, 188, 125, 1);
+
+    &::after {
+        opacity: 1;
+        background-color: rgba(2, 188, 125, 1);
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

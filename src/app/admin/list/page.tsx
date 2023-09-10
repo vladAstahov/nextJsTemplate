@@ -1,5 +1,8 @@
-"use client";
+import { Header } from "@/widgets/header";
 
-// export default function QuizList() {
-    
-// }
+
+export default function QuizList() {
+    return <>
+        <Header />
+    </>
+}

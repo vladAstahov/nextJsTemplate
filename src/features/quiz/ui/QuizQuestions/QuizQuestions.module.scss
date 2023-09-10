@@ -1,0 +1,30 @@
+.question {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input {
+    width: 413px;
+}
+
+.index {
+    font-size: 16px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.icon {
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.button {
+    display: block;
+    width: 413px;
+    margin: 0 auto;
+}
