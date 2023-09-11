@@ -1,6 +1,7 @@
 import { createStore, createEvent, sample, createEffect } from 'effector'
 import { useStore, useUnit } from 'effector-react'
-import { type Question, type Quiz, type Answer } from './types'
+import { type Question, type Answer } from './types'
+import { type Quiz } from '@/entities/quiz/model/types'
 import { quizApi } from '@/shared/api'
 
 const updateQuiz = createEvent<Partial<Quiz>>()
@@ -25,6 +26,7 @@ const addAnswer = createEvent<{
 const resetQuiz = createEvent()
 
 const $quiz = createStore<Quiz>({
+    id: null,
     name: '',
     active: false,
     link: '',

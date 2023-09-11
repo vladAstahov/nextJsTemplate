@@ -1,10 +1,3 @@
-export type Quiz = {
-    name: string
-    active: boolean
-    link: string
-    limit: number
-}
-
 export type Question = {
     id: string,
     text: string

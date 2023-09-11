@@ -12,23 +12,17 @@
       "static/css/app/admin/list/page.css",
       "static/chunks/app/admin/list/page.js"
     ],
-    "/admin/add/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/admin/add/page.css",
-      "static/chunks/app/admin/add/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/admin/main/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/admin/main/page.css",
       "static/chunks/app/admin/main/page.js"
+    ],
+    "/admin/add/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/add/page.css",
+      "static/chunks/app/admin/add/page.js"
     ]
   }
 }

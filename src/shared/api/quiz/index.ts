@@ -6,5 +6,13 @@ export const quizApi: QuizApi = {
         url: '/admin/add/api',
         method: 'POST',
         body: params
+    }),
+    getQuizes: () => makeRequest({
+        url: '/admin/list/api',
+        method: 'GET'
+    }),
+    getQuiz: (id: string) => makeRequest({
+        url: `/admin/quiz/${id}`,
+        method: 'GET'
     })
 }

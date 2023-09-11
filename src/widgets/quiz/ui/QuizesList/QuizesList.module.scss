@@ -1,0 +1,31 @@
+.root {
+    width: 490px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid rgba(116, 116, 116, 0.9);
+    box-shadow: 0px 0px 3px rgba(98, 50, 223, 1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
+    transition-property: box-shadow, transform;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 5px rgba(98, 50, 223, 1);
+    }
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
