@@ -4,6 +4,8 @@ import { Quiz } from "./types";
 import { quizApi } from "@/shared/api";
 import { createEffect, createStore, sample } from "effector";
 
+import { activeModel } from './active'
+
 const getListFx = createEffect(quizApi.getQuizes)
 
 const quizesGate = createGate()
@@ -25,6 +27,8 @@ const useQuizes = () => {
 }
 
 export const quizesModel = {
-    useQuizes
+    useQuizes,
+
+    activeModel
 }
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { isAuthAdminModel } from "@/entities/admin/model";
 import { adminStorage } from "@/shared/storage/admin";
 import { Header } from "@/widgets/header";
 import { useRouter } from "next/navigation";

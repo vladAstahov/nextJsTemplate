@@ -1,0 +1,1 @@
+export { UpdateQuizButton } from './UpdateQuizButton'

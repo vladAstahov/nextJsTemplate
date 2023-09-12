@@ -12,7 +12,7 @@ export const quizApi: QuizApi = {
         method: 'GET'
     }),
     getQuiz: (id: string) => makeRequest({
-        url: `/admin/quiz/${id}`,
+        url: `/admin/quiz/${id}/api`,
         method: 'GET'
     })
 }

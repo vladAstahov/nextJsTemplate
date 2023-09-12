@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react"
-import { quizModel } from "@/features/quiz/model"
+import { quizesModel } from "@/entities/quiz/model"
 import { useState } from "react"
 import { Answer } from "@/features/quiz/model/types"
 import { Input } from "@/shared/ui/Input"
@@ -9,8 +9,8 @@ import { RadioToggle } from "@/shared/ui/RadioToggle"
 import styles from './QuizAnswers.module.scss'
 
 export const QuizAnswers = () => {
-    const { answers, add } = quizModel.useAnswers()
-    const { questions } = quizModel.useQuestions()
+    const { answers, add } = quizesModel.activeModel.useAnswers()
+    const { questions } = quizesModel.activeModel.useQuestions()
 
     const [active, setActive] = useState(questions[0].id)
 
@@ -39,7 +39,7 @@ const AnswerRow = React.memo<{
     answer: Answer,
     questionIndex: number
 }>(({ answer, questionIndex }) => {
-    const { update } = quizModel.useAnswers()
+    const { update } = quizesModel.activeModel.useAnswers()
 
     return <div className={styles.row}>
         <Input

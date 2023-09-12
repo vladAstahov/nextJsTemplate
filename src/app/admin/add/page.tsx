@@ -1,12 +1,13 @@
 import { Header } from "@/widgets/header";
-import { AddQuizForm, QuizAnswers, QuizQuetions } from '@/features/quiz/ui'
+import {QuizForm, QuizAnswers, QuizQuestions, CreateQuizButton} from '@/features/quiz/ui'
 
 export default function QuizAdd() {
     return <>
         <Header />
-        <AddQuizForm
-            questions={<QuizQuetions />}
+        <QuizForm
+            questions={<QuizQuestions />}
             answers={<QuizAnswers />}
+            submitButton={<CreateQuizButton />}
         />
     </>
 }

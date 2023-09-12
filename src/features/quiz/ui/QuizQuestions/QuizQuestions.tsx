@@ -2,15 +2,15 @@
 
 import React, { useCallback } from "react"
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
-import { quizModel } from '../../model'
+import { quizesModel } from '@/entities/quiz/model'
 import { Input } from "@/shared/ui/Input";
 import { Question } from "@/features/quiz/model/types";
 import { IconBase } from "@/shared/ui/IconBase";
 import styles from './QuizQuestions.module.scss'
 import { Button } from "@/shared/ui/Button";
 
-export const QuizQuetions = () => {
-    const { questions, update, add, reorder } = quizModel.useQuestions()
+export const QuizQuestions = () => {
+    const { questions, add, reorder } = quizesModel.activeModel.useQuestions()
 
     const onDragEnd = useCallback((result: DropResult) => {
         if (result.destination) {
@@ -43,7 +43,7 @@ const QuestionRow = React.memo<{
     question: Question
     index: number
 }>(({ question, index }) => {
-    const { update } = quizModel.useQuestions()
+    const { update } = quizesModel.activeModel.useQuestions()
 
     return (
         <Draggable draggableId={question.id} index={index}>
