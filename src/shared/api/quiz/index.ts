@@ -13,6 +13,15 @@ export const quizApi: QuizApi = {
     }),
     getQuiz: (id: string) => makeRequest({
         url: `/admin/quiz/${id}/api`,
-        method: 'GET'
+        method: 'GET',
+    }),
+    updateQuiz: params => makeRequest({
+        url: `/admin/quiz/${params.quiz.id}/api`,
+        method: 'PUT',
+        body: params
+    }),
+    deleteQuiz: id => makeRequest({
+        url: `/admin/quiz/${id}/api`,
+        method: 'DELETE',
     })
 }

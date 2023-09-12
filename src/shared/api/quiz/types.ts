@@ -1,3 +1,5 @@
+import { Quiz } from "@prisma/client"
+
 export type ResponseQuiz = {
     id: string
     name: string
@@ -7,49 +9,52 @@ export type ResponseQuiz = {
     started: boolean
 }
 
+export type ResponseQuestion = {
+    id: string
+    quizId: string
+    text: string
+    image: string
+    index: number
+}
+
+export type ResponseAnswer = {
+    id: string
+    questionId: string
+    text: string
+    isCorrect: boolean
+}
+
+export type ApiParams = {
+    quiz: {
+        id?: string
+        name: string,
+        active: boolean,
+        link: string,
+        usersLimit: number
+    },
+    questions: {
+        id: string
+        text: string
+        image?: string
+    }[],
+    answers: {
+        id?: string
+        questionId: string
+        text: string
+        isCorrect: boolean
+    }[]
+}
+
 export type QuizApi = {
-    createQuiz: (params: {
-        quiz: {
-            name: string,
-            active: boolean,
-            link: string,
-            usersLimit: null
-        },
-        questions: {
-            id: string
-            text: string
-            image?: string
-        }[],
-        answers: {
-            questionId: string
-            text: string
-            isCorrect: boolean
-        }[]
-    }) => Promise<void>
+    createQuiz: (params: ApiParams) => Promise<void>
     getQuizes: () => Promise<{
         data: ResponseQuiz[]
     }>
-    getQuiz: (id: string) => Promise<{
-        quiz: {
-            id: string
-            name: string
-            active: boolean
-            link: string
-            usersLimit: number
-            started: boolean
-        },
-        questions: {
-            id: string
-            quizId: string
-            text: string
-            image: string
-            index: number
-        }[]
-        answers: {
-            id: string
-            questionId: string
-            text: string
-            isCorrect: boolean
-        }[]
+    getQuiz: (params: string) => Promise<{
+        quiz: ResponseQuiz,
+        questions: ResponseQuestion[]
+        answers: Record<ResponseAnswer['questionId'], ResponseAnswer[]>
     }>
+    updateQuiz: (params: ApiParams) => Promise<void>
+    deleteQuiz: (id: Quiz['id']) => Promise<void>
 }

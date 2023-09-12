@@ -1,8 +1,10 @@
 import { createStore, createEvent, sample, createEffect } from 'effector'
-import {createGate, useGate, useStore, useUnit} from 'effector-react'
+import { createGate, useGate, useStore, useUnit } from 'effector-react'
 import { type Question, type Answer } from './types'
 import { type Quiz } from '@/entities/quiz/model/types'
 import { quizApi } from '@/shared/api'
+import { staticValue } from './static'
+import { questionsToDomain, quizDataToDomain, toApi } from '@/entities/quiz/model/lib'
 
 const updateQuiz = createEvent<Partial<Quiz>>()
 
@@ -25,31 +27,12 @@ const addAnswer = createEvent<{
 
 const resetQuiz = createEvent()
 
-const $quiz = createStore<Quiz>({
-    id: null,
-    name: '',
-    active: false,
-    link: '',
-    limit: 0
-}).on(updateQuiz, (state, payload) => ({
+const $quiz = createStore<Quiz>(staticValue.DEFAULT_QUIZ).on(updateQuiz, (state, payload) => ({
     ...state,
     ...payload
 })).reset(resetQuiz)
 
-const $questions = createStore<Question[]>([
-    {
-        id: '1',
-        text: '',
-    },
-    {
-        id: '2',
-        text: ''
-    },
-    {
-        id: '3',
-        text: ''
-    }
-])
+const $questions = createStore<Question[]>(staticValue.DEFAULT_QUESTIONS)
     .on(updateQuestion, (state, payload) => state.map(question => question.id === payload.id ? {
         ...question,
         ...payload
@@ -66,50 +49,7 @@ const $questions = createStore<Question[]>([
         return state
     }).reset(resetQuiz)
 
-const $answers = createStore<Record<Answer['questionId'], Answer[]>>({
-    '1': [
-        {
-            id: '1',
-            questionId: '1',
-            text: '',
-            isCorrect: true
-        },
-        {
-            id: '2',
-            questionId: '1',
-            text: '',
-            isCorrect: false
-        },
-    ],
-    '2': [
-        {
-            id: '1',
-            questionId: '2',
-            text: '',
-            isCorrect: true
-        },
-        {
-            id: '2',
-            questionId: '2',
-            text: '',
-            isCorrect: false
-        },
-    ],
-    '3': [
-        {
-            id: '1',
-            questionId: '3',
-            text: '',
-            isCorrect: true
-        },
-        {
-            id: '2',
-            questionId: '3',
-            text: '',
-            isCorrect: false
-        },
-    ]
-})
+const $answers = createStore<Record<Answer['questionId'], Answer[]>>(staticValue.DEFAULT_ANSWERS)
     .on(updateAnswer, (state, { questionId, id, ...answer }) => ({
         ...state,
         [questionId]: state[questionId].map(item => item.id === id ? { ...item, ...answer } : item)
@@ -182,24 +122,29 @@ sample({
         questions: $questions
     },
     clock: createQuiz,
-    fn: data => ({
-        quiz: {
-            name: data.quiz.name,
-            active: data.quiz.active,
-            link: data.quiz.link,
-            usersLimit: data.quiz.limit
-        },
-        answers: Object.values(data.answers).reduce((prev, curr) => [...prev, ...curr], []),
-        questions: data.questions
-    }),
+    fn: data => toApi(data),
     target: createQuizFx
+})
+
+const updateQuizFx = createEffect(quizApi.updateQuiz)
+const updateQuizApi = createEvent()
+
+sample({
+    source: {
+        quiz: $quiz,
+        answers: $answers,
+        questions: $questions
+    },
+    clock: updateQuizApi,
+    fn: data => toApi(data),
+    target: updateQuizFx
 })
 
 const resetCreated = createEvent()
 const $created = createStore<boolean>(false).reset(resetCreated)
 
 sample({
-    clock: createQuizFx.doneData,
+    clock: [createQuizFx.doneData, updateQuizFx.doneData],
     fn: () => true,
     target: $created
 })
@@ -212,19 +157,25 @@ sample({
     target: resetQuiz
 })
 
+const deleteQuizFx = createEffect(quizApi.deleteQuiz)
+
 const quizGate = createGate<NonNullable<Quiz['id']>>()
 const getQuizByIdFx = createEffect(quizApi.getQuiz)
 
 sample({
     clock: getQuizByIdFx.doneData,
-    fn: ({ quiz }) => ({
-        id: quiz.id,
-        name: quiz.name,
-        active: quiz.active,
-        link: quiz.link,
-        limit: quiz.limit
-    }),
+    fn: ({ quiz }) => quizDataToDomain(quiz),
     target: updateQuiz
+})
+sample({
+    clock: getQuizByIdFx.doneData,
+    fn: ({ questions }) => questionsToDomain(questions),
+    target: $questions
+})
+sample({
+    clock: getQuizByIdFx.doneData,
+    fn: ({ answers }) => answers,
+    target: $answers
 })
 
 sample({
@@ -272,10 +223,23 @@ const useCreate = () => ({
     reset: useUnit(resetCreated)
 })
 
+const useUpdate = () => ({
+    update: useUnit(updateQuizApi),
+    isLoading: useStore(updateQuizFx.pending),
+    isCreated: useStore($created),
+    reset: useUnit(resetCreated)
+})
+
+const useDelete = () => ({
+    deleteQuiz: useUnit(deleteQuizFx),
+})
+
 export const activeModel = {
     useQuiz,
     useQuestions,
     useAnswers,
     useCreate,
-    useGetQuiz
+    useUpdate,
+    useGetQuiz,
+    useDelete
 }
