@@ -1,5 +1,8 @@
 "use client";
 
+import { mainModel } from "@/entities/main/model";
+import { quizesModel } from "@/entities/quiz/model";
+import { UpdateMainButton, UpdateMainForm } from "@/features/main";
 import { adminStorage } from "@/shared/storage/admin";
 import { Header } from "@/widgets/header";
 import { useRouter } from "next/navigation";
@@ -7,6 +10,8 @@ import { useEffect } from "react";
 
 export default function AdminMain() {
     const { replace } = useRouter()
+    const { isLoading } = mainModel.useGetMain()
+    quizesModel.useQuizes()
 
     useEffect(() => {
         const isAuth = adminStorage.getIsAuth()
@@ -18,5 +23,11 @@ export default function AdminMain() {
 
     return <>
         <Header />
+        {!isLoading && (
+            <>
+                <UpdateMainForm />
+                <UpdateMainButton />
+            </>
+        )}
     </>
 }

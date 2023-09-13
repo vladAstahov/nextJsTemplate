@@ -120,11 +120,9 @@ export async function PUT(req: Request) {
                 })
             }
         })
-
-        return NextResponse.json({
-            header: req.headers
-        })
     })
+
+    return NextResponse.json({})
 }
 
 export async function DELETE(req: Request) {

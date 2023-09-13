@@ -46,4 +46,13 @@ model Main {
   description String
   time        String
   date        String
+  quizId      String
+  price       String
+}
+
+model Promo {
+  id     String @unique @default(cuid())
+  quizId String
+  limit  Int
+  passed Int
 }

@@ -148,19 +148,18 @@ sample({
     fn: () => true,
     target: $created
 })
-sample({
-    source: {
-        created: $created
-    },
-    clock: $created,
-    filter: ({ created }) => Boolean(created),
-    target: resetQuiz
-})
 
 const deleteQuizFx = createEffect(quizApi.deleteQuiz)
 
 const quizGate = createGate<NonNullable<Quiz['id']>>()
 const getQuizByIdFx = createEffect(quizApi.getQuiz)
+
+const createQuizGate = createGate()
+
+sample({
+    clock: createQuizGate.open,
+    target: resetQuiz
+})
 
 sample({
     clock: getQuizByIdFx.doneData,
@@ -193,6 +192,10 @@ const useGetQuiz = (id: NonNullable<Quiz['id']>) => {
     return {
         isLoading: useStore(getQuizByIdFx.pending)
     }
+}
+
+const useInitQuizCreating = () => {
+    useGate(createQuizGate)
 }
 
 const useQuiz = () => {
@@ -241,5 +244,6 @@ export const activeModel = {
     useCreate,
     useUpdate,
     useGetQuiz,
-    useDelete
+    useDelete,
+    useInitQuizCreating
 }

@@ -1,3 +1,5 @@
+import { Main } from "@/entities/main/model/types"
+
 export type MainApi = {
     getActiveQuiz: () => Promise<{
         quiz: {
@@ -8,5 +10,7 @@ export type MainApi = {
             price: string
             limit: string
         }
-    }>
+    }>,
+    getAdminMain: () => Promise<Main>,
+    updateMain: (params: Main) => Promise<void>
 }
