@@ -4,6 +4,7 @@ import { mainModel } from "@/entities/main/model";
 import { quizesModel } from "@/entities/quiz/model";
 import { UpdateMainButton, UpdateMainForm } from "@/features/main";
 import { adminStorage } from "@/shared/storage/admin";
+import { ContainerLayout } from "@/shared/ui/ContainerLayout";
 import { Header } from "@/widgets/header";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -24,10 +25,10 @@ export default function AdminMain() {
     return <>
         <Header />
         {!isLoading && (
-            <>
+            <ContainerLayout title="Главная">
                 <UpdateMainForm />
                 <UpdateMainButton />
-            </>
+            </ContainerLayout>
         )}
     </>
 }

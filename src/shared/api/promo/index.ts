@@ -19,5 +19,9 @@ export const promoApi: PromoApi = {
     deletePromo: async id => makeRequest({
         url: `/admin/promo/${id}/api`,
         method: 'DELETE',
+    }),
+    getPromo: async id => makeRequest({
+        url: `/admin/promo/${id}/api`,
+        method: 'GET'
     })
 }

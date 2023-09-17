@@ -1,0 +1,1 @@
+export { DeletePromoButton } from './DeletePromoButton'

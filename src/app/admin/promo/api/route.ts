@@ -10,14 +10,19 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-    const promo = await req.json() as {
+    const { quizId, limit, name } = await req.json() as {
         quizId: string
         limit: number
-        available: number
+        name: string
     }
 
     const prismaPromo = await prisma.promo.create({
-        data: promo
+        data: {
+            name,
+            limit,
+            quizId,
+            passed: 0
+        }
     })
 
     return NextResponse.json({

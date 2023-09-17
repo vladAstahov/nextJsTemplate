@@ -7,4 +7,7 @@ export type PromoApi = {
     createPromo: (params: Promo) => Promise<void>,
     updatePromo: (params: Promo) => Promise<void>,
     deletePromo: (id: Promo['id']) => Promise<void>
+    getPromo: (id: Promo['id']) => Promise<{
+        promo: Promo
+    }>
 }

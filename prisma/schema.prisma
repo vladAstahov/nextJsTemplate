@@ -52,6 +52,7 @@ model Main {
 
 model Promo {
   id     String @unique @default(cuid())
+  name   String
   quizId String
   limit  Int
   passed Int

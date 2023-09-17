@@ -2,6 +2,7 @@ import { createGate, useGate, useStore } from 'effector-react'
 import { Promo } from './types'
 import { createEffect, createStore, sample } from 'effector'
 import { promoApi } from '@/shared/api'
+import { activeModel } from './active'
 
 const $promoList = createStore<Promo[]>([])
 
@@ -11,11 +12,7 @@ $promoList.on(getPromoListFx.doneData, (_, { data }) => data)
 const promoListGate = createGate()
 
 sample({
-    source: {
-        list: $promoList
-    },
     clock: promoListGate.open,
-    filter: ({ list }) => !Boolean(list.length),
     target: getPromoListFx
 })
 
@@ -23,10 +20,12 @@ const useGetPromoList = () => {
     useGate(promoListGate)
 
     return {
-        isLoading: useStore(getPromoListFx.pending)
+        isLoading: useStore(getPromoListFx.pending),
+        list: useStore($promoList)
     }
 }
 
-const usePromoList = () => ({
-    list: useStore($promoList)
-})
+export const promoModel = {
+    useGetPromoList,
+    activeModel
+}

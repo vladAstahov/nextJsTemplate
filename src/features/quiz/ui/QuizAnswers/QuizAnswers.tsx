@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useEffect, useMemo } from "react"
+import React, { useMemo } from "react"
 import { quizesModel } from "@/entities/quiz/model"
 import { useState } from "react"
 import { Input } from "@/shared/ui/Input"
 import { RadioToggle } from "@/shared/ui/RadioToggle"
 import styles from './QuizAnswers.module.scss'
 import { Answer } from "@/entities/quiz/model/types";
+import { Select, SelectProps } from "@/shared/ui/Select";
 
 export const QuizAnswers = () => {
     const { answers } = quizesModel.activeModel.useAnswers()
@@ -16,20 +17,16 @@ export const QuizAnswers = () => {
 
     const questionIndex = useMemo(() => questions.findIndex(item => item.id === active), [questions, active])
 
-    useEffect(() => {
-        console.log(active)
-        console.log(answers)
-    }, [active, answers])
+    const selectOptions = useMemo<SelectProps['options']>(() => questions.map((question, index) => ({
+        id: question.id,
+        text: `Вопрос №${index + 1}`
+    })), [])
 
     return (
         <div>
             <div className={styles.header}>
                 <p>Создание ответа на вопрос:</p>
-                <select className={styles.select} value={active} onChange={e => setActive(e.target.value)}>
-                    {questions.map((question, index) => (
-                        <option value={question.id}>Вопрос №{index}</option>
-                    ))}
-                </select>
+                <Select value={active} options={selectOptions} onChange={setActive} />
             </div>
             <div>
                 {answers[active].map((answer, index) => (

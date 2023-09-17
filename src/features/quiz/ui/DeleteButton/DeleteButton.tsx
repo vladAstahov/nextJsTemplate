@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useCallback, useEffect } from "react";
-import styles from "@/features/quiz/ui/QuizForm/QuizForm.module.scss";
 import { Button } from "@/shared/ui/Button";
 import { quizesModel } from "@/entities/quiz/model";
 import { useRouter } from "next/navigation";
+import styles from './DeleteButton.module.scss'
 
 export const DeleteButton = () => {
     const { deleteQuiz } = quizesModel.activeModel.useDelete()
@@ -17,7 +17,7 @@ export const DeleteButton = () => {
     }, [])
 
     return <Button
-        className={styles.button}
+        className={styles.root}
         ariaLabel="Удалить"
         isBold={true}
         onPress={onPress}>

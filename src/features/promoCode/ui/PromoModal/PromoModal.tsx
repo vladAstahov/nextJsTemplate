@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback, useMemo, useState } from "react"
 import { Input, InputProps } from "@/shared/ui/Input"
 import { Modal, ModalProps } from "@/shared/ui/Modal"

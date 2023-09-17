@@ -1,6 +1,12 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/admin/promo/page": "app/admin/promo/page.js",
   "/admin/list/page": "app/admin/list/page.js",
-  "/admin/main/page": "app/admin/main/page.js",
-  "/admin/list/api/route": "app/admin/list/api/route.js"
+  "/admin/quiz/[id]/page": "app/admin/quiz/[id]/page.js",
+  "/admin/promo/add/page": "app/admin/promo/add/page.js",
+  "/admin/promo/[id]/page": "app/admin/promo/[id]/page.js",
+  "/admin/promo/api/route": "app/admin/promo/api/route.js",
+  "/admin/promo/[id]/api/route": "app/admin/promo/[id]/api/route.js",
+  "/admin/list/api/route": "app/admin/list/api/route.js",
+  "/admin/quiz/[id]/api/route": "app/admin/quiz/[id]/api/route.js"
 }

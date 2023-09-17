@@ -1,0 +1,1 @@
+export { QuizSelect, type QuizSelectProps } from './QuizSelect'

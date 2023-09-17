@@ -1,10 +1,34 @@
 {
   "pages": {
+    "/admin/promo/add/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/promo/add/page.css",
+      "static/chunks/app/admin/promo/add/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/admin/promo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/promo/page.css",
+      "static/chunks/app/admin/promo/page.js"
+    ],
+    "/admin/promo/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/promo/[id]/page.css",
+      "static/chunks/app/admin/promo/[id]/page.js"
+    ],
+    "/admin/main/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/main/page.css",
+      "static/chunks/app/admin/main/page.js"
     ],
     "/admin/list/page": [
       "static/chunks/webpack.js",
@@ -12,11 +36,11 @@
       "static/css/app/admin/list/page.css",
       "static/chunks/app/admin/list/page.js"
     ],
-    "/admin/main/page": [
+    "/admin/quiz/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/admin/main/page.css",
-      "static/chunks/app/admin/main/page.js"
+      "static/css/app/admin/quiz/[id]/page.css",
+      "static/chunks/app/admin/quiz/[id]/page.js"
     ]
   }
 }

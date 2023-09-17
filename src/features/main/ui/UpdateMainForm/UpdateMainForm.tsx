@@ -3,7 +3,8 @@ import { mainModel } from "@/entities/main/model"
 import { PropsDefault } from "@/shared/types/helpers"
 import { Input } from "@/shared/ui/Input"
 import { Main } from "@/entities/main/model/types"
-import { quizesModel } from "@/entities/quiz/model"
+import { QuizSelect } from "@/entities/quiz"
+import styles from './UpdateMainForm.module.scss'
 
 const placeholders: Record<keyof Omit<Main, 'id'>, string> = {
     title: 'Введите заголовок',
@@ -16,13 +17,13 @@ const placeholders: Record<keyof Omit<Main, 'id'>, string> = {
 
 export const UpdateMainForm = React.memo<PropsDefault>(() => {
     const { main, update } = mainModel.useMain()
-    const { pool } = quizesModel.useQuizes()
 
     return <div>
         {Object.keys(main).map(key => (
             <>
                 {key !== 'quizId' && key !== 'id' && (
                     <Input
+                        className={styles.field}
                         value={String(main[key as keyof Main])}
                         placeholder={placeholders[key as keyof Omit<Main, 'id'>]}
                         setValue={newValue => update({
@@ -30,13 +31,12 @@ export const UpdateMainForm = React.memo<PropsDefault>(() => {
                         })} />
                 )}
                 {key === 'quizId' && (
-                    <select value={main.quizId} onChange={e => update({
-                        quizId: e.target.value
-                    })}>
-                        {Object.values(pool).map(quiz => (
-                            <option value={quiz.id!}>{quiz.name}</option>
-                        ))}
-                    </select>
+                    <QuizSelect
+                        className={styles.field}
+                        value={main.quizId}
+                        onChange={newValue => update({
+                            quizId: newValue
+                        })} />
                 )}
             </>
         ))}
