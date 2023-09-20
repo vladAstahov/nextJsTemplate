@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+// @ts-ignore
 import prisma from "../../../../../lib/prisma";
 
 export async function POST(req: Request) {
@@ -6,6 +7,7 @@ export async function POST(req: Request) {
         login: string,
         password: string
     }
+    // @ts-ignore
     const admin = await prisma.admin.findUnique({
         where: {
             login: login

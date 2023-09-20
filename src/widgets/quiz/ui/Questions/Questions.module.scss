@@ -93,6 +93,7 @@
 
 .image {
     width: 100%;
+    max-width: 300px;
 
     @include media-maxTablet {
         margin-top: 20px;

@@ -13,8 +13,12 @@
 }
 
 .image {
-    width: 100%;
+    width: 80%;
     max-width: 670px;
+
+    @include media-desktop {
+        width: 50%;
+    }
 }
 
 .text {

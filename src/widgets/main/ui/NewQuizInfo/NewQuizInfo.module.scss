@@ -27,9 +27,11 @@
     flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: -13px;
+    max-width: 273px;
 
     @include media-desktop {
         margin-top: 10px;
+        max-width: none;
     }
 }
 

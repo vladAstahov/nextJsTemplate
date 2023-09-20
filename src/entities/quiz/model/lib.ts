@@ -26,7 +26,7 @@ export const toApi = (data: {
     questions: Question[]
 }): ApiParams => ({
     quiz: {
-        id: data.quiz.id,
+        id: data.quiz.id!,
         name: data.quiz.name,
         active: data.quiz.active,
         link: data.quiz.link,

@@ -6,7 +6,7 @@ import { Input } from '../Input'
 import { Button } from '../Button'
 
 export type LoginFormProps = {
-    isLoading: boolean
+    isLoading?: boolean
     onSubmit: (params: { login: string, password: string }) => void
 }
 

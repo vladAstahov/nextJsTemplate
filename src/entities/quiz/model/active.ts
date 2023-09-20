@@ -94,6 +94,7 @@ sample({
 })
 
 sample({
+    // @ts-ignore
     source: {
         answers: $answers
     },

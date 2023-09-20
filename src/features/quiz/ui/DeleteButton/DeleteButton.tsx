@@ -12,7 +12,7 @@ export const DeleteButton = () => {
     const { replace } = useRouter()
 
     const onPress = useCallback(async () => {
-        await deleteQuiz(quiz.id)
+        await deleteQuiz(quiz.id!)
         replace('/admin/list')
     }, [])
 

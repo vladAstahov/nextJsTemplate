@@ -40,7 +40,7 @@ export const Questions = () => {
     return <div className={styles.root}>
         <div className={styles.main}>
             <div className={styles.header}>
-                <IconBase className={styles.icon} name="placeholder" />
+                <IconBase className={styles.icon} name="time" />
                 <span className={styles.time}>6:47</span>
                 <p className={styles.rate}>
                     <span>+ 10</span> баллов
@@ -50,7 +50,7 @@ export const Questions = () => {
                 <p>№{number}</p>
                 <p>Текст вопроса, пример длинного текста  ? если будет вопрос на 3 строчки например , то форма будет просто  большего размера</p>
             </div>
-            {device.mobile && (
+            {!device.desktop && (
                 <LazyLoadImage src="images/question.svg" className={styles.image} />
             )}
             <div className={styles.answer}>

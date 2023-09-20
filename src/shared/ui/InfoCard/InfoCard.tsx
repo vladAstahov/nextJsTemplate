@@ -18,7 +18,7 @@ export const InfoCard = React.memo<InfoCardProps>(
                     <span className={styles.index}>0{index}</span>
                 </div>
                 {isIcon && (
-                    <IconBase className={styles.icon} name="chevron-right" />
+                    <IconBase className={styles.icon} name="arrow" />
                 )}
             </div>
             <h3 className={styles.title}>{title}</h3>

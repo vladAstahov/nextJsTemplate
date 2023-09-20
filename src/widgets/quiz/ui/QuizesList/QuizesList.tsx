@@ -30,7 +30,7 @@ const QuizRow = React.memo<PropsDefault & Quiz>(({ id, name, active }) => {
         <p>{name}</p>
         <div className={styles.inner}>
             <RadioToggle isActive={active} onPress={() => { }}>Активен</RadioToggle>
-            <IconBase name="chevron-right" />
+            <IconBase name="arrow" />
         </div>
     </Card>
 })

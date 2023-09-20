@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+// @ts-ignore
 import prisma from "../../../lib/prisma";
 
 export async function GET() {
+    // @ts-ignore
     const activeQuiz = await prisma.quiz.findFirst({
         where: {
             active: true

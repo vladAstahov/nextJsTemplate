@@ -19,9 +19,12 @@ module.exports = (phase, { defaultConfig }) => {
     defaultConfig['eslint'] = {
         ignoreDuringBuilds: true,
     }
+    // defaultConfig['typescript'] = {
+    //     ignoreBuildErrors: true,
+    // }
 
-    // defaultConfig['output'] = 'export'
-    // defaultConfig['basePath'] = '/quizJS'
+    defaultConfig['output'] = 'export'
+    defaultConfig['basePath'] = '/quizJS'
 
     return defaultConfig;
 }

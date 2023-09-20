@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+// @ts-ignore
 import prisma from "../../../../../lib/prisma";
 
 export async function GET() {
+    // @ts-ignore
     const main = await prisma.main.findUnique({
         where: {
             id: 1
@@ -22,6 +24,7 @@ export async function PUT(req: Request) {
         price: string
     }
 
+    // @ts-ignore
     await prisma.main.update({
         where: {
             id

@@ -23,7 +23,9 @@ export const Radio = React.memo<RadioProps>(
         return <div className={classes} onClick={() => isDisabled ? {} : onPress(!isActive)}>
             <div className={styles.wrapper}>
                 <span className={`${styles.radio} ${isActive && styles['is-active']}`} />
-                <IconBase className={`${styles.icon} ${(isSuccess || isError) && styles['is-icon']}`} name="placeholder" />
+                <IconBase
+                    className={`${styles.icon} ${(isSuccess || isError) && styles['is-icon']}`}
+                    name={isSuccess ? 'success' : 'error'} />
             </div>
             <p>{children}</p>
         </div>

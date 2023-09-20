@@ -14,7 +14,7 @@ export const Footer = () => {
                 {device.desktop && (
                     <span>@user_name</span>
                 )}
-                <IconBase className={styles.icon} name="placeholder" />
+                <IconBase className={styles.icon} name="telegram" />
             </a>
         </div>
     </footer>

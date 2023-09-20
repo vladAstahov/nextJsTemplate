@@ -21,17 +21,17 @@ type ValueType = {
 const responseContent: Record<PromoStatus, ResponseProps> = {
     'ok': {
         view: 'success',
-        icon: 'placeholder',
+        icon: 'success',
         text: 'Вы успешно зарегистрировались на игру. Ссылка на участие придет вам на указанный email'
     },
     'error': {
         view: 'critical',
-        icon: 'placeholder',
+        icon: 'error',
         text: 'Промокод не действителен'
     },
     'activated': {
         view: 'warning',
-        icon: 'placeholder',
+        icon: 'success',
         text: 'Промокод уже был активирован'
     }
 }
@@ -69,7 +69,7 @@ export const PromoModal = React.memo<PromoModalProps>((props) => {
                 className={styles.field}
                 value={value.promo}
                 label="Промокод"
-                placeholder="Введите промокот"
+                placeholder="Введите промокод"
                 setValue={newValue => onInput(newValue, 'promo')}
             />
             <Input

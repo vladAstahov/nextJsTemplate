@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
+// @ts-ignore
 import prisma from "../../../../../lib/prisma";
 
 export async function GET() {
+    // @ts-ignore
     const promos = await prisma.promo.findMany()
 
     return NextResponse.json({
@@ -16,6 +18,7 @@ export async function POST(req: Request) {
         name: string
     }
 
+    // @ts-ignore
     const prismaPromo = await prisma.promo.create({
         data: {
             name,

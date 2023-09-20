@@ -10,10 +10,11 @@ export type InfoSectionLayoutProps = PropsDefault & {
         title: string,
         description: string
     }[]
+    isIcon?: false
 }
 
 export const InfoSectionLayout = React.memo<InfoSectionLayoutProps>(
-    ({ title, data, className }) => (
+    ({ title, data, isIcon = true, className }) => (
         <SectioLayout className={className}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.wrapper}>
@@ -23,7 +24,7 @@ export const InfoSectionLayout = React.memo<InfoSectionLayoutProps>(
                         key={index}
                         index={index + 1}
                         {...element}
-                        isIcon={index !== data.length - 1}
+                        isIcon={isIcon && index !== data.length - 1}
                     />
                 ))}
             </div>

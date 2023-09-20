@@ -4,10 +4,10 @@ import React, { useCallback } from "react"
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
 import { quizesModel } from '@/entities/quiz/model'
 import { Input } from "@/shared/ui/Input";
-import { Question } from "@/features/quiz/model/types";
 import { IconBase } from "@/shared/ui/IconBase";
 import styles from './QuizQuestions.module.scss'
 import { Button } from "@/shared/ui/Button";
+import { Question } from "@/entities/quiz/model/types";
 
 export const QuizQuestions = () => {
     const { questions, add, reorder } = quizesModel.activeModel.useQuestions()
@@ -60,7 +60,7 @@ const QuestionRow = React.memo<{
                             id: question.id,
                             text: newValue
                         })} />
-                        <IconBase className={styles.icon} name="placeholder" />
+                        <IconBase className={styles.icon} name="menu" />
                     </div>
                 </div>
             )}

@@ -9,6 +9,7 @@ import { useParams } from "next/navigation";
 
 export default function PromoScreen() {
     const params = useParams()
+    // @ts-ignore
     const { isLoading } = promoModel.activeModel.useGetPromo(params.id!)
 
     return <>

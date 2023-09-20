@@ -8,6 +8,7 @@ import { ContainerLayout } from "@/shared/ui/ContainerLayout";
 
 export default function QuizPage() {
     const params = useParams()
+    // @ts-ignore
     const { isLoading } = quizesModel.activeModel.useGetQuiz(params.id!)
 
     return <>

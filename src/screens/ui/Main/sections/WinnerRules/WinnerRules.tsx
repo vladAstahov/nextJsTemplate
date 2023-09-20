@@ -25,5 +25,6 @@ export const WinnerRules = () => (
         className={styles.root}
         title="Как определяется победитель"
         data={data}
+        isIcon={false}
     />
 )
